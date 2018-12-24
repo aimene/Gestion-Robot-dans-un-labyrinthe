@@ -6,16 +6,15 @@
 #include <vector>
 #include<string>
 #include "std.h"
-#include"cases.h"
 
 namespace gestionRobotTerrain {
     using std::string ;
     using std::vector;
     using geom::point;
-    using affichage::fenetre ;
+    #include "cases.h"
+
 class terrain
 {
-    class cases ;
 public:
 
 

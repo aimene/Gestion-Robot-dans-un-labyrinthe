@@ -1,8 +1,9 @@
 #include "caseBordureMur.h"
 #include "terrain.h"
+#include"cases.h"
 namespace gestionRobotTerrain
 {
-    caseBordureMur(double segment,bool murGauche,bool murDroit,bool murBas,bool murHaut):cases{segment},d_gauche{murGauche},d_droit{murDroit},d_bas{murBas},d_haut{murHaut}
+    caseBordureMur::caseBordureMur(int segment,bool murGauche,bool murDroit,bool murBas,bool murHaut):cases{segment},d_gauche{murGauche},d_droit{murDroit},d_bas{murBas},d_haut{murHaut}
     {}
     bool caseBordureMur::estMurGauche()const
     {
@@ -36,6 +37,10 @@ namespace gestionRobotTerrain
     {
         d_haut = change ;
     }
-    void caseBordureMur::dessineCases(fenetre& fenetre, int ligne,int colonne)
+    void caseBordureMur::dessineCases(const fenetre& fenetre)
+
+    {
+
+    }
 
 }

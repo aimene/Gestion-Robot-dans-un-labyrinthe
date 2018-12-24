@@ -7,17 +7,13 @@ namespace gestionRobotTerrain
 {
 
 
-
-
-
-
 terrain::terrain(const string& nomFichier):d_nomFichier{nomFichier}
 {
     litTerrain();
 }
 
 terrain::terrain(const point& position, const string& nomFichier, const vector<vector<cases*>>terrainMatrice)
-    :d_position{position}, d_nomFichier{nomfichier},d_terrain {terrainMatrice}
+    :d_position{position}, d_nomFichier{nomFichier},d_terrain {terrainMatrice}
 {
     changeHauteur(d_terrain[0].size());
     changeLargeur(d_terrain[0][0].size());

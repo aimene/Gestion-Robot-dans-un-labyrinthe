@@ -2,8 +2,8 @@
 #include "terrain.h"
 namespace gestionRobotTerrain
 {
-
-caseMur::caseMur(double segment,bool mur):cases(segment),d_mur{mur}
+using affichage::fenetre;
+caseMur::caseMur(int segment,bool mur):cases(segment),d_mur{mur}
 {}
 caseMur::~caseMur()
 {}
@@ -15,7 +15,7 @@ void caseMur::changerMurValeur(bool change)
 {
    d_mur = change;
 }
-void caseMur::dessineCasses(const fenetre& fenetre,const terrain& terrain,int ligne,int colonne,)
+void caseMur::dessineCasses(const fenetre& fenetre)
 {}
 
 }
