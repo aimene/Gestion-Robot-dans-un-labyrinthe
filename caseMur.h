@@ -1,6 +1,8 @@
 #ifndef CASEMUR_H
 #define CASEMUR_H
 #include "cases.h"
+namespace gestionRobotTerrain
+{
 
 class caseMur : public cases
 {
@@ -9,8 +11,9 @@ class caseMur : public cases
         ~caseMur();
         virtual void dessineCases(fenetre& fenetre,int ligne,int colonne) override ;
         bool estMur() const ;
-        void changerMurValeur() ;
+        void changerMurValeur(bool change) ;
     private:
         bool d_mur ; // vrai si mur
 };
+}
 #endif // CASEMUR_H

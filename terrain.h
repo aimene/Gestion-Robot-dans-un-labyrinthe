@@ -13,7 +13,6 @@ public:
 
     terrain();
     terrain(const point & position);
-    terrain()
     ~terrain();
     int hauteur() const;
     int largeur() const;
