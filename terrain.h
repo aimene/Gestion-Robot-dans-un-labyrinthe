@@ -14,14 +14,9 @@ class terrain
 {
 public:
 
-<<<<<<< HEAD
-    terrain();
-    terrain(const point & position);
-=======
 
     terrain(const string& nomFichier);
     terrain(const point & position, const string& nomFichier,const vector<vector<cases*>> terrainMatrice);
->>>>>>> 441206dc64c059e746062252a681b4c9c390f8b9
     ~terrain();
 
     int hauteur() const;
