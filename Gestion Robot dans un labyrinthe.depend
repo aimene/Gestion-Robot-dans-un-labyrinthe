@@ -1,4 +1,5 @@
 # depslib dependency file v1.0
+<<<<<<< HEAD
 1545660847 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\main.cpp
 	<iostream>
 
@@ -34,4 +35,58 @@
 
 1545662159 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\fenetreaffichage.cpp
 	"fenetreAffichage.h"
+=======
+1545658464 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\fenetre.cpp
+	<cmath>
+	"fenetre.h"
+	"graphics.h"
+	"fenetreAffichage.h"
+
+1545659475 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\fenetre.h
+	<iostream>
+	"point.h"
+	"fenetreAffichage.h"
+
+1545296891 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\point.h
+	<iosfwd>
+
+1545658406 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\fenetreaffichage.h
+
+1545296890 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\graphics.h
+
+1545658479 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\fenetreaffichage.cpp
+	"fenetreAffichage.h"
+
+1545658613 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\main.cpp
+	<iostream>
+
+1545297615 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\mur.cpp
+
+1545296891 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\point.cpp
+	<iostream>
+	<cmath>
+	"point.h"
+
+1545296891 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\robot.cpp
+	"robot.h"
+
+1545302354 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\robot.h
+	<iostream>
+	"point.h"
+
+1545296891 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\test.cpp
+	"std.h"
+	<ctime>
+	"windows.h"
+
+1545296891 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\std.h
+	<iostream>
+
+1545296891 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\winbgi.cpp
+	<windows.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+	"graphics.h"
+>>>>>>> 441206dc64c059e746062252a681b4c9c390f8b9
 

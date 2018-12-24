@@ -6,9 +6,6 @@
 #include"fenetreAffichage.h"
 
 using namespace geom;
-
-
-
 namespace geom { class point; }
 
 namespace affichage
