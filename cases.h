@@ -9,9 +9,9 @@ public:
    virtual ~cases();
    virtual void dessineCases(fenetre& fenetre,int ligne,int colonne) = 0;
    double segment() const;
-   void changerSegment(double segment) ;
+   void changeSegment(double segment) ;
 
-protected :
+private :
 double d_segment;
 };
 

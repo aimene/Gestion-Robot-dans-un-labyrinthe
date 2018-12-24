@@ -5,6 +5,7 @@
 class caseMur : public cases
 {
     public:
+        caseMur(double segment, bool mur = true);
         ~caseMur();
         virtual void dessineCases(fenetre& fenetre,int ligne,int colonne) override ;
         bool estMur() const ;
