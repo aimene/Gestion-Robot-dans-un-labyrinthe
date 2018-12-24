@@ -4,16 +4,16 @@
 #include "terrain.h"
 namespace gestionRobotTerrain
 {
-
+class terrain;
 class caseBordureMur : public cases
 {
 public:
-    caseBordureMur(double segment,bool murGauche,bool murDroit,bool murBas,bool murHaut);
-    virtual void dessineCases(const fenetre& fenetre,const terrain& terrain,int ligne,int colonne) override ;
-    bool estMurGauche();
-    bool estMurDroit();
-    bool estMurBas();
-    bool estMurHaut();
+    caseBordureMur(int segment,bool murGauche,bool murDroit,bool murBas,bool murHaut);
+    virtual void dessineCases(const fenetre& fenetre)  ;
+    bool estMurGauche() const;
+    bool estMurDroit() const;
+    bool estMurBas()const;
+    bool estMurHaut()const;
     void changeMurGauche(bool change);
     void changeMurDroit(bool change);
     void changeMurHaut(bool change);

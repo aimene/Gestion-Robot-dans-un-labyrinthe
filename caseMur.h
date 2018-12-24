@@ -7,9 +7,9 @@ namespace gestionRobotTerrain
 class caseMur : public cases
 {
     public:
-        caseMur(double segment, bool mur = true);
+        caseMur(int segment, bool mur = true);
         ~caseMur();
-        virtual void dessineCases(fenetre& fenetre,int ligne,int colonne) override ;
+        virtual void dessineCases(const fenetre& fenetre)  ;
         bool estMur() const ;
         void changerMurValeur(bool change) ;
     private:

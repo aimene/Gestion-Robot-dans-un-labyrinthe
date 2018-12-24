@@ -32,11 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="caseBordureMur.cpp" />
+		<Unit filename=".gitignore" />
 		<Unit filename="caseBordureMur.h" />
-		<Unit filename="caseMur.cpp" />
 		<Unit filename="caseMur.h" />
-		<Unit filename="cases.cpp" />
 		<Unit filename="cases.h" />
 		<Unit filename="fenetre.cpp" />
 		<Unit filename="fenetre.h" />

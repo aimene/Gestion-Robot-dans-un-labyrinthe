@@ -1,4 +1,4 @@
-é#include"fenetreAffichage.h"
+#include"fenetreAffichage.h"
 
 namespace affichage
 {

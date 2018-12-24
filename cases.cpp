@@ -1,15 +1,15 @@
-#include "cases.h
+#include "cases.h"
 namespace gestionRobotTerrain
 {
-cases::cases(double segment):d_segment{segment}
+cases::cases(int segment):d_segment{segment}
 {}
 cases::~cases()
 {}
-double cases::segment() const
+int cases::segment() const
 {
     return d_segment;
 }
-void cases::changeSegment(double segment)
+void cases::changeSegment(int segment)
 {
     d_segment = segment;
 }
