@@ -143,3 +143,39 @@
 1545691891 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\casemur.h
 	"cases.h"
 
+1545744897 source:c:\users\bilell\documents\gestion-robot-dans-un-labyrinthe\fenetre.cpp
+	<cmath>
+	"fenetre.h"
+	"graphics.h"
+	"fenetreAffichage.h"
+
+1545744897 c:\users\bilell\documents\gestion-robot-dans-un-labyrinthe\fenetre.h
+	<iostream>
+	"point.h"
+	"fenetreAffichage.h"
+
+1545744897 c:\users\bilell\documents\gestion-robot-dans-un-labyrinthe\point.h
+	<iosfwd>
+
+1545744897 c:\users\bilell\documents\gestion-robot-dans-un-labyrinthe\fenetreaffichage.h
+
+1545744897 c:\users\bilell\documents\gestion-robot-dans-un-labyrinthe\graphics.h
+
+1545744897 source:c:\users\bilell\documents\gestion-robot-dans-un-labyrinthe\fenetreaffichage.cpp
+	"fenetreAffichage.h"
+
+1545744897 source:c:\users\bilell\documents\gestion-robot-dans-un-labyrinthe\main.cpp
+	<iostream>
+
+1545744897 source:c:\users\bilell\documents\gestion-robot-dans-un-labyrinthe\point.cpp
+	<iostream>
+	<cmath>
+	"point.h"
+
+1545744897 source:c:\users\bilell\documents\gestion-robot-dans-un-labyrinthe\winbgi.cpp
+	<windows.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+	"graphics.h"
+
