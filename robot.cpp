@@ -12,7 +12,7 @@ namespace gestionRobotTerrain
 
     bool robot::detecteObstacleDevant(const terrain& terrain)
     {
-        return detecteObstacleDevant();
+
     }
 
     void robot::avanceCase(const terrain& terrain)

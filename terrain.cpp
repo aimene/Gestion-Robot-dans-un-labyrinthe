@@ -16,14 +16,11 @@ terrain::terrain(const string& nomFichier):d_nomFichier{nomFichier}
     litTerrain();
 }
 
-terrain::terrain(const point & position, const string& nomFichier,const vector<vector<cases*> > terrainMatrice)
-    :d_position{position}, d_nomFichier{nomFichier},d_terrain {terrainMatrice}
+terrain::terrain(const point & position, const string& nomFichier,int type,int tailleCase,const vector<vector<cases*> > terrainMatrice)
+    :d_position{position}, d_nomFichier{nomFichier},d_type{type},d_tailleCase{tailleCase}, d_terrain {terrainMatrice}
 {
-
     changeHauteur(d_terrain.size());
     changeLargeur(d_terrain[0].size());
-
-
 }
 
 terrain::~terrain()
@@ -54,9 +51,15 @@ const string& terrain::nomFichier() const
 {
     return d_nomFichier;
 }
-
+int terrain::type() const
+{
+    return d_type ;
+}
+int terrain::tailleCase() const
+{
+    return d_tailleCase;
+}
 const vector<vector<cases*> >& terrain::terrainMatrice() const
-
 {
     return d_terrain;
 }
@@ -90,62 +93,67 @@ bool terrain::litTerrain()
 
     if(fichier)  // si l'ouverture a réussi
     {
+        char isMur ='1';
         fichier>> d_position;
         fichier>> d_hauteur;
         fichier>> d_largeur;
+        fichier>> d_type;
         string ligne ;
-        for(int i=0 ; i< hauteur();++i )
+
+        if(type()==1)
         {
-
-              getline(fichier, ligne);
-             char isMur ='1';
-            //char  isNotMur="0";
-            if( d_terrain[0][0] )
+            for(int i=0 ; i< hauteur(); ++i )
             {
+                getline(fichier, ligne);
+
                 for(int j=0; j < largeur(); ++j)
-                   {
-                       if(ligne[j]==isMur)
-                       ((caseMur*)d_terrain[i][j])->changerMurValeur(true);
-                    else
-                        ((caseMur*)d_terrain[i][j])->changerMurValeur(false);
-                   }
-            }
-
-            else
-            {
-                for(int j=0; j < largeur(); j+4)
                 {
+                    caseMur* caseMurs = new caseMur{false};
                     if(ligne[j]==isMur)
-                     ((caseBordureMur*)   terrainMatriceModifieCase()[i][j])->changeMurGauche(true);
+                        caseMurs->changeValeurMur(true);
                     else
-                       ((caseBordureMur*)terrainMatriceModifieCase()[i][j])->changeMurGauche(false);
-                    if(ligne[j+1]==isMur)
-                       ((caseBordureMur*)terrainMatriceModifieCase()[i][j])->changeMurHaut(true);
-                    else
-                       ((caseBordureMur*)terrainMatriceModifieCase()[i][j])->changeMurHaut(false);
-                    if(ligne[j+2]==isMur)
-                       ((caseBordureMur*)terrainMatriceModifieCase()[i][j])->changeMurDroit(true);
-                    else
-                       ((caseBordureMur*)terrainMatriceModifieCase()[i][j])->changeMurDroit(false);
-                    if(ligne[j+3]==isMur)
-                       ((caseBordureMur*)terrainMatriceModifieCase()[i][j])->changeMurBas(true);
-                    else
-                       ((caseBordureMur*)terrainMatriceModifieCase()[i][j])->changeMurBas(false);
+                        caseMurs->changeValeurMur(false);
 
+                    d_terrain[i][j]=caseMurs;
                 }
             }
-
         }
+        else
+        {
+            for(int i=0 ; i< hauteur(); ++i )
+            {
+                getline(fichier, ligne);
 
-        fichier.close();  // on ferme le fichier
-        return false ;
+                for(int j=0; j < largeur(); j+4)
+                {
+                    caseBordureMur* caseborduremur= new caseBordureMur{false,false,false,false};
+                    if(ligne[j]==isMur)
+                        caseborduremur->changeMurGauche(true);
+                    else
+                       caseborduremur->changeMurGauche(false);
+                    if(ligne[j+1]==isMur)
+                        caseborduremur->changeMurHaut(true);
+                    else
+                       caseborduremur->changeMurHaut(false);
+                    if(ligne[j+2]==isMur)
+                      caseborduremur->changeMurDroit(true);
+                    else
+                       caseborduremur->changeMurDroit(false);
+                    if(ligne[j+3]==isMur)
+                      caseborduremur->changeMurBas(true);
+                    else
+                       caseborduremur->changeMurBas(false);
+
+                   terrainMatriceModifieCase()[i][j]=caseborduremur;
+                }
+
+            }
+        }
+        fichier.close();
+        return true ;
     }
-    else  // sinon
+    else
         return false;
-
-    // cerr << "Impossible d'ouvrir le fichier !" << endl;
-
-
 }
 
 void terrain::sauveTerrain()

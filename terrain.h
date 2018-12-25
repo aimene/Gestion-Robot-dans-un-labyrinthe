@@ -26,11 +26,13 @@ public:
 
 
     terrain(const string& nomFichier);
-    terrain(const point & position, const string& nomFichier,const vector<vector<cases*> > terrainMatrice);
+    terrain(const point & position, const string& nomFichier, int type ,int tailleCase ,const vector<vector<cases*> > terrainMatrice);
     ~terrain();
 
     int hauteur()  const;
     int largeur()  const;
+    int type () const ;
+    int tailleCase() const ;
     const point& position() const;
     const string& nomFichier() const;
     const vector<vector<gestionRobotTerrain::cases*> >& terrainMatrice() const ;
@@ -41,6 +43,9 @@ public:
     void chanegrNomFichier(const string& nomFichier);
 
     bool litTerrain();
+    void litCaseMur();
+    void litCaseBordureMur();
+
     void sauveTerrain() ;
 
 
@@ -52,9 +57,9 @@ private:
     void changeLargeur( int largeur);
 
 
-    int d_type;
+    int d_type; // 1 pour terran avec des cases murs
     point d_position;
-    int d_largeur,d_hauteur;
+    int d_largeur,d_hauteur, d_tailleCase;
     vector<vector<cases*> > d_terrain;
     string d_nomFichier;
 };
