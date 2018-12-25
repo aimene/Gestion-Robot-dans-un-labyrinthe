@@ -1,9 +1,8 @@
 #include "caseBordureMur.h"
-#include "terrain.h"
-#include "cases.h"
 
-using geom::point;
-using affichage::fenetre;
+
+
+
 
 namespace gestionRobotTerrain
 {
@@ -41,10 +40,11 @@ namespace gestionRobotTerrain
     {
         d_haut = change ;
     }
-    void caseBordureMur::dessineCases(const fenetre& fenetre,const terrain& terrain)
+    void caseBordureMur::dessineCases(const fenetre& fenetre,const terrain& terrain) const
     {
-        int x1,y1,x2,y2
-        point point1,point2;
+        int x1,y1,x2,y2;
+        point point1;
+        point point2;
         if(estMurGauche())
         {
             x1 = terrain.position().x();
@@ -52,15 +52,15 @@ namespace gestionRobotTerrain
             x2 = x1;
             y2 = y1 + terrain.hauteur();
             point1 = {x1,y2};
-            point2 = {x2,y2}
+            point2 = {x2,y2};
             fenetre.dessineSegment(point1,point2);
         }
         else if(estMurHaut())
         {
           x1 = terrain.position().x();
           y1 = terrain.position().y();
-          x2 = x1 + largeur();
-          y2 = y1 + hauteur();
+          x2 = x1 + terrain.largeur();
+          y2 = y1 + terrain.hauteur();
         }
         else if(estMurDroit())
         {

@@ -56,7 +56,7 @@ public :
   Clear the window.
 */
   void clear();
-  void dessineSegment(const point& point1,const point& point2);
+  void dessineSegment(const point& point1,const point& point2) const;
   void dessineRectanglePlein(const point& basGauche, const point& hautDroit);
 /**
   Return the pixel x-coordinate in the window corresponding to

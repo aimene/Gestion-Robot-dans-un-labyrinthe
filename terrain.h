@@ -4,32 +4,41 @@
 #include <iostream>
 #include "point.h"
 #include <vector>
-#include <string>
-#include "cases.h"
+#include<string.h>
+#include"cases.h"
+
+using namespace affichage ;
+using namespace geom ;
+
+namespace affichage { class fenetre; }
+namespace geom { class point ;}
 
 namespace gestionRobotTerrain {
-    using std::string;
+    using std::string ;
     using std::vector;
-    using geom::point;
-    using affichage::fenetre;
+
+class cases ;
 class terrain
 {
+
 public:
 
+
+
     terrain(const string& nomFichier);
-    terrain(const point& position, const string& nomFichier,const vector<vector<cases*> > terrainMatrice);
+    terrain(const point & position, const string& nomFichier,const vector<vector<cases*> > terrainMatrice);
     ~terrain();
 
     int hauteur()  const;
     int largeur()  const;
-    point position() const;
+    const point& position() const;
     const string& nomFichier() const;
-    const vector<vector<cases*> > terrainMatrice() const ;
+    const vector<vector<gestionRobotTerrain::cases*> >& terrainMatrice() const ;
 
-    vector<vector<gestionRobotTerrain::cases*> > terrainMatriceModifieCase();
+    vector<vector<cases*> >& terrainMatriceModifieCase();
 
 
-    void changeNomFichier(const string& nomFichier);
+    void chanegrNomFichier(const string& nomFichier);
 
     bool litTerrain();
     void sauveTerrain() ;
@@ -37,16 +46,15 @@ public:
 
     void dessineTerrain(fenetre& fenetre);
 
-    static const string repertoire ;
+     const string repertoire ="terrain/";
 private:
     void changeHauteur( int hauteur);
     void changeLargeur( int largeur);
 
     point d_position;
     int d_largeur,d_hauteur;
-    vector<vector<gestionRobotTerrain::cases*> > d_terrain;
+    vector<vector<cases*> > d_terrain;
     string d_nomFichier;
 };
-
 }
 #endif // TERRAIN_H

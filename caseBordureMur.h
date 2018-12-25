@@ -4,14 +4,13 @@
 
 namespace gestionRobotTerrain
 {
-class terrain;
-class point;
-class fenetre;
+
+
 class caseBordureMur : public cases
 {
 public:
     caseBordureMur(int segment,bool murGauche,bool murDroit,bool murBas,bool murHaut);
-    virtual void dessineCases(const fenetre& fenetre,const terrain& terrain)  ;
+    virtual void dessineCases(const fenetre& fenetre,const terrain& terrain) const ;
     bool estMurGauche() const;
     bool estMurDroit() const;
     bool estMurBas()const;

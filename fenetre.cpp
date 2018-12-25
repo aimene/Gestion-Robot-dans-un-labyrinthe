@@ -69,7 +69,7 @@ void fenetre::wait(int ms)
 {
   delay(ms);
 }
-void fenetre::dessineSegment(const point& point1,const point& point2)
+void fenetre::dessineSegment(const point& point1,const point& point2) const
 {
     line(point1.x(),point1.y(),point2.x(),point2.y());
 }
