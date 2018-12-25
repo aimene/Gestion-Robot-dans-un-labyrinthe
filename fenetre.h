@@ -57,7 +57,7 @@ public :
 */
   void clear();
   void dessineSegment(const point& point1,const point& point2) const;
-  void dessineRectanglePlein(const point& basGauche, const point& hautDroit);
+  void dessineRectanglePlein(const point& basGauche, const point& hautDroit) const;
 /**
   Return the pixel x-coordinate in the window corresponding to
   the x-coordinate in the scene

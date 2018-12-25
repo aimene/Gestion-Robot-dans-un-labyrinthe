@@ -78,7 +78,7 @@ void terrain::changeLargeur(int largeur)
     d_largeur=largeur;
 }
 
-void terrain::chanegrNomFichier(const string& nomFichier)
+void terrain::changeNomFichier(const string& nomFichier)
 {
     d_nomFichier = nomFichier;
     litTerrain();

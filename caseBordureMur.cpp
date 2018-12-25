@@ -40,35 +40,49 @@ namespace gestionRobotTerrain
     {
         d_haut = change ;
     }
-    void caseBordureMur::dessineCases(const fenetre& fenetre,const terrain& terrain) const
+    void caseBordureMur::dessineCases(const fenetre& fenetre,const terrain& terrain,int ligne,int colonne) const
     {
         int x1,y1,x2,y2;
-        point point1;
-        point point2;
+        point basGauche,hautGauche,basDroit,hautDroit;
         if(estMurGauche())
         {
-            x1 = terrain.position().x();
-            y1 = terrain.position().y();
+            x1 = terrain.position().x() + colonne * segment();
+            y1 = terrain.position().y() + ligne * segment();
             x2 = x1;
-            y2 = y1 + terrain.hauteur();
-            point1 = {x1,y2};
-            point2 = {x2,y2};
-            fenetre.dessineSegment(point1,point2);
+            y2 = y1 + segment();
+            hautGauche = {x1,y2};
+            basGauche= {x2,y2};
+            fenetre.dessineSegment(hautGauche,basGauche);
         }
         else if(estMurHaut())
         {
-          x1 = terrain.position().x();
-          y1 = terrain.position().y();
-          x2 = x1 + terrain.largeur();
-          y2 = y1 + terrain.hauteur();
+          x1 = terrain.position().x() + colonne *segment();
+          y1 = terrain.position().y() + ligne * segment();
+          x2 = x1 + colonne * segment() + segment();
+          y2 = y1 + segment() ;
+          hautGauche = {x1,y2};
+          hautDroit = {x2,y2};
+          fenetre.dessineSegment(hautGauche,hautDroit);
         }
         else if(estMurDroit())
         {
-
+            x1 = terrain.position().x() + colonne * segment() + segment();
+            y1 = terrain.position().y() + colonne * segment();
+            x2 = x1;
+            y2 = y1 + ligne * segment() + segment();
+            hautDroit = {x1,y2};
+            basDroit = {x2,y2};
+            fenetre.dessineSegment(hautDroit,basDroit);
         }
         else if(estMurBas())
         {
-
+           x1 = terrain.position().x() + colonne * segment() + segment();
+           y1 = terrain.position().y() + ligne * segment();
+           x2 = terrain.position().x() + colonne * segment();
+           y2 = terrain.position().y()+ ligne * segment() + segment();
+           basDroit = {x1,y2};
+           basGauche = {x2,y2};
+           fenetre.dessineSegment(basDroit,basGauche);
         }
 
     }

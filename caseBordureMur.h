@@ -10,7 +10,7 @@ class caseBordureMur : public cases
 {
 public:
     caseBordureMur(int segment,bool murGauche,bool murDroit,bool murBas,bool murHaut);
-    virtual void dessineCases(const fenetre& fenetre,const terrain& terrain) const ;
+    virtual void dessineCases(const fenetre& fenetre,const terrain& terrain,int ligne,int colonne) const ;
     bool estMurGauche() const;
     bool estMurDroit() const;
     bool estMurBas()const;
