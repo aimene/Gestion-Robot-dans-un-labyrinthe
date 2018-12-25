@@ -1,6 +1,8 @@
+#include "cases.h"
 #include "caseMur.h"
 #include"fenetre.h"
 #include "terrain.h"
+
 namespace gestionRobotTerrain
 {
 
