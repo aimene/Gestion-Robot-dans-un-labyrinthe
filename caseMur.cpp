@@ -1,5 +1,7 @@
+#include "cases.h"
 #include "caseMur.h"
 #include "terrain.h"
+
 namespace gestionRobotTerrain
 {
 using affichage::fenetre;
@@ -15,7 +17,7 @@ void caseMur::changerMurValeur(bool change)
 {
    d_mur = change;
 }
-void caseMur::dessineCasses(const fenetre& fenetre)
+void caseMur::dessineCases(const fenetre& fenetre)
 {}
 
 }

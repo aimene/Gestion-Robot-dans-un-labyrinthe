@@ -1,7 +1,7 @@
 #ifndef CASEBORDUREMUR_H
 #define CASEBORDUREMUR_H
 #include "cases.h"
-#include "terrain.h"
+
 namespace gestionRobotTerrain
 {
 class terrain;

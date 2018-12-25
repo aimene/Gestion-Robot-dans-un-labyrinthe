@@ -2,18 +2,16 @@
 #include <fstream>
 
 using namespace std;
-using gestionRobotTerrain::cases;
-using gestionRobotTerrain::point;
+
 namespace gestionRobotTerrain
 {
 
-
 terrain::terrain(const string& nomFichier):d_nomFichier{nomFichier}
 {
-    litTerrain(nomFichier);
+    litTerrain();
 }
 
-terrain::terrain(const point& position, const string& nomFichier, const vector<vector<cases*> >terrainMatrice)
+terrain::terrain(const point& position, const string& nomFichier, const vector<vector<cases*>>terrainMatrice)
     :d_position{position}, d_nomFichier{nomFichier},d_terrain {terrainMatrice}
 {
     changeHauteur(d_terrain[0].size());
@@ -46,12 +44,12 @@ const string& terrain::nomFichier() const
     return d_nomFichier;
 }
 
-const vector< vector<cases*> > terrain::terrainMatrice() const
+const vector<vector<cases*> > terrain::terrainMatrice() const
 {
     return d_terrain;
 }
 
-vector<vector<cases*> > terrain::terrainMatriceModifieCase()
+vector < vector<cases*> > terrain::terrainMatriceModifieCase()
 {
     return d_terrain;
 }
@@ -66,15 +64,15 @@ void terrain::changeLargeur(int largeur)
     d_largeur=largeur;
 }
 
-void terrain::changeNomFichier(const string& nomFichier)
+void terrain::chanegrNomFichier(const string& nomFichier)
 {
     d_nomFichier = nomFichier;
-    litTerrain(nomFichier);
+    litTerrain();
 }
 
 bool terrain::litTerrain(const string& nomFichier)
 {
-    ifstream fichier(nomFichier.c_str()); // on ouvre le fichier en lecture
+    ifstream fichier(string{repertoire+nomFichier()} .c_str()); // on ouvre le fichier en lecture
 
     if(fichier)  // si l'ouverture a réussi
     {
@@ -82,9 +80,9 @@ bool terrain::litTerrain(const string& nomFichier)
         fichier>> d_hauteur;
         fichier>> d_largeur;
         string ligne ;
-        for(int i=0 ; i<hauteur();++i )
+        for(int i=0 ; i< hauteur();++i )
         {
-            fichier>>ligne ;
+            fichier>> ligne ;
             if(terrainMatriceModifieCase()[0][0] typeof caseMur)
             {
                 for(int j=0; j < largeur(); ++j)
@@ -92,6 +90,7 @@ bool terrain::litTerrain(const string& nomFichier)
                         terrainMatriceModifieCase()[i][j].changeMur(true);
                     else
                         terrainMatriceModifieCase()[i][j].changeMur(false);
+            }
 
             else
             {

@@ -4,33 +4,33 @@
 #include <iostream>
 #include "point.h"
 #include <vector>
-#include<string>
+#include <string>
 #include "cases.h"
 
 namespace gestionRobotTerrain {
-    using std::string ;
+    using std::string;
     using std::vector;
     using geom::point;
-    using affichage::fenetre ;
+    using affichage::fenetre;
 class terrain
 {
-    class cases ;
 public:
+
     terrain(const string& nomFichier);
-    terrain(const point & position, const string& nomFichier,const vector<vector<cases*>> terrainMatrice);
+    terrain(const point& position, const string& nomFichier,const vector<vector<cases*> > terrainMatrice);
     ~terrain();
 
     int hauteur() const;
     int largeur() const;
     const string& nomFichier() const;
-    const vector< vector<gestionRobotTerrain::cases*> > terrainMatrice() const ;
+    const vector<vector<cases*> > terrainMatrice() const ;
 
-    vector< vector<cases*> > terrainMatriceModifieCase();
+    vector<vector<gestionRobotTerrain::cases*> > terrainMatriceModifieCase();
 
 
     void changeNomFichier(const string& nomFichier);
 
-    bool litTerrain(const string& nomFichier);
+    bool litTerrain();
     void sauveTerrain() ;
 
 
@@ -42,9 +42,10 @@ private:
     void changeLargeur( int largeur);
 
     point d_position;
-    string d_nomFichier;
-    vector<vector<gestionRobotTerrain::cases*> > d_terrain;
     int d_largeur,d_hauteur;
+    vector<vector<gestionRobotTerrain::cases*> > d_terrain;
+    string d_nomFichier;
 };
+
 }
 #endif // TERRAIN_H
