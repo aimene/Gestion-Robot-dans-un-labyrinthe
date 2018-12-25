@@ -20,8 +20,9 @@ public:
     terrain(const point& position, const string& nomFichier,const vector<vector<cases*> > terrainMatrice);
     ~terrain();
 
-    int hauteur() const;
-    int largeur() const;
+    int hauteur()  const;
+    int largeur()  const;
+    point position() const;
     const string& nomFichier() const;
     const vector<vector<cases*> > terrainMatrice() const ;
 

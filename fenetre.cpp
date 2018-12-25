@@ -1,8 +1,10 @@
+
 #include<cmath>
 #include"fenetre.h"
 #include"graphics.h"
 #include"fenetreAffichage.h"
 
+using geom::point;
 namespace affichage
 {
 
@@ -37,7 +39,7 @@ void fenetre::close()
   }
 }
 
-void fenetre::repeatUntilButton()
+void fenetre::repeteJusquaBouton()
 {
   //getch();
   waituntilbuttonpressed();
@@ -67,9 +69,13 @@ void fenetre::wait(int ms)
 {
   delay(ms);
 }
-void fenetre::traceLigneDe(const point& point1,const point& point2)
+void fenetre::dessineSegment(const point& point1,const point& point2)
 {
     line(point1.x(),point1.y(),point2.x(),point2.y());
+}
+void fenetre::dessineRectanglePlein(const point& basGauche, const point& hautDroit)
+{
+    rectangle(basGauche.x(),basGauche.y(),hautDroit.x(),hautDroit.y());
 }
 
 

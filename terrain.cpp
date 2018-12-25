@@ -15,7 +15,7 @@ terrain::terrain(const point& position, const string& nomFichier, const vector<v
     :d_position{position}, d_nomFichier{nomFichier},d_terrain {terrainMatrice}
 {
     changeHauteur(d_terrain[0].size());
-    //changeLargeur(d_terrain[0][0].size());
+    changeLargeur(d_terrain[0][0].size());
 }
 
 terrain::~terrain()
@@ -38,7 +38,10 @@ int terrain::largeur() const
 {
     return d_largeur;
 }
-
+point terrain::positon() const
+{
+    return d_position;
+}
 const string& terrain::nomFichier() const
 {
     return d_nomFichier;

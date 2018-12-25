@@ -2,6 +2,7 @@
 #define FENETRE_H
 
 #include <iostream>
+
 #include "point.h"
 #include"fenetreAffichage.h"
 
@@ -43,7 +44,7 @@ public :
 /**
   Wait until the user click on the window with the mouse
 */
-  void repeatUntilButton();
+  void repeteJusquaBouton();
 /**
   Wait for some time
   @param ms the waiting time in milliseconds
@@ -55,8 +56,8 @@ public :
   Clear the window.
 */
   void clear();
-  void traceLigneDe(const point& point1,const point& point2);
-
+  void dessineSegment(const point& point1,const point& point2);
+  void dessineRectanglePlein(const point& basGauche, const point& hautDroit);
 /**
   Return the pixel x-coordinate in the window corresponding to
   the x-coordinate in the scene

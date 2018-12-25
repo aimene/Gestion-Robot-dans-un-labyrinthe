@@ -3,10 +3,10 @@
 #include "windows.h"
 int main()
 {
-int x=5;
+ int x=5;
  while(5>0)
  {
-     time_t temps;
+  time_t temps;
   struct tm datetime;
   char  format[32];
 
