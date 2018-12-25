@@ -6,7 +6,7 @@
 using namespace::affichage;
 namespace gestionRobotTerrain
 {
-class terrain;
+
 class cases
 {
 public:

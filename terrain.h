@@ -8,28 +8,34 @@
 #include "std.h"
 #include"cases.h"
 
+using namespace affichage ;
+using namespace geom ;
+
+namespace affichage { class fenetre; }
+namespace geom { class point ;}
+
 namespace gestionRobotTerrain {
     using std::string ;
     using std::vector;
-    using geom::point;
-    using affichage::fenetre ;
+
+class cases ;
 class terrain
 {
-    class cases ;
+
 public:
 
 
 
     terrain(const string& nomFichier);
-    terrain(const point & position, const string& nomFichier,const vector<vector<cases*>> terrainMatrice);
+    terrain(const point & position, const string& nomFichier,const vector<vector<cases*> > terrainMatrice);
     ~terrain();
 
     int hauteur() const;
     int largeur() const;
     const string& nomFichier() const;
-    const vector<vector<cases*>> terrainMatrice() const ;
+    const vector<vector<gestionRobotTerrain::cases*> >& terrainMatrice() const ;
 
-    vector<vector<cases*>> terrainMatriceModifieCase();
+    vector<vector<cases*> >& terrainMatriceModifieCase();
 
 
     void chanegrNomFichier(const string& nomFichier);
@@ -40,7 +46,7 @@ public:
 
     void dessineTerrain(fenetre& fenetre);
 
-    static const string repertoire ;
+     const string repertoire ="terrain/";
 private:
     void changeHauteur( int hauteur);
     void changeLargeur( int largeur);
