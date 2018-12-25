@@ -40,7 +40,7 @@ public:
     vector<vector<cases*> >& terrainMatriceModifieCase();
 
 
-    void chanegrNomFichier(const string& nomFichier);
+    void changeNomFichier(const string& nomFichier);
 
     bool litTerrain();
     void litCaseMur();

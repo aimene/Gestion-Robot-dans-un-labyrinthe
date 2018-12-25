@@ -19,13 +19,13 @@
 	<iostream>
 	"point.h"
 
-1545755684 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\fenetre.cpp
+1545758976 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\fenetre.cpp
 	<cmath>
 	"fenetre.h"
 	"graphics.h"
 	"fenetreAffichage.h"
 
-1545755667 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\fenetre.h
+1545758976 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\fenetre.h
 	<iostream>
 	"point.h"
 	"fenetreAffichage.h"
@@ -45,7 +45,11 @@
 	"graphics.h"
 	"fenetreAffichage.h"
 
+<<<<<<< HEAD
 1545755616 D
+=======
+1545758836 D
+>>>>>>> 8a6aa769ae333563e56041700de0be4524f65310
 
 1545752803 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\fenetre.h
 	<iostream>
@@ -149,17 +153,17 @@
 
 1545746976 reMur.h"
 
-1545755711 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\caseborduremur.cpp
+1545760445 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\caseborduremur.cpp
 	"caseBordureMur.h"
 
-1545755638 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\caseborduremur.h
+1545761908 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\caseborduremur.h
 	"cases.h"
 
-1545755742 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\cases.h
+1545761909 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\cases.h
 	"fenetre.h"
 	"terrain.h"
 
-1545755791 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\terrain.h
+1545757513 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\terrain.h
 	<iostream>
 	"point.h"
 	<vector>
@@ -172,7 +176,7 @@
 	"fenetre.h"
 	"terrain.h"
 
-1545755616 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\casemur.h
+1545761908 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\casemur.h
 	"cases.h"
 
 1545744897 source:c:\users\bilell\documents\gestion-robot-dans-un-labyrinthe\fenetre.cpp
@@ -218,7 +222,7 @@
 1545754707 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\cases.cpp
 	"cases.h"
 
-1545755905 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\terrain.cpp
+1545757529 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\terrain.cpp
 	"terrain.h"
 	<fstream>
 	<vector>
@@ -227,5 +231,16 @@
 	"caseMur.h"
 	"caseBordureMur.h"
 
+<<<<<<< HEAD
 1545755905 069c5f9064324b8c49dd4c4bec4b55805362b
+=======
+1545757529 069c5f9064324b8c49dd4c4bec4b55805362b
+
+1545636728 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\winbgi.cpp
+	<windows.h>
+	<stddef.h>
+	<stdio.h>
+	<math.h>
+	"graphics.h"
+>>>>>>> 8a6aa769ae333563e56041700de0be4524f65310
 
