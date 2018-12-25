@@ -46,11 +46,13 @@ public:
 
     void dessineTerrain(fenetre& fenetre);
 
-     const string repertoire ="terrain/";
+    const string repertoire ="terrain/";
 private:
     void changeHauteur( int hauteur);
     void changeLargeur( int largeur);
 
+
+    int d_type;
     point d_position;
     int d_largeur,d_hauteur;
     vector<vector<cases*> > d_terrain;
