@@ -4,8 +4,7 @@
 #include <iostream>
 #include "point.h"
 #include <vector>
-#include<string>
-#include "std.h"
+#include<string.h>
 #include"cases.h"
 
 using namespace affichage ;

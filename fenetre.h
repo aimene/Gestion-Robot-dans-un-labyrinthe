@@ -55,6 +55,7 @@ public :
   Clear the window.
 */
   void clear();
+  void traceLigneDe(const point& point1,const point& point2);
 
 /**
   Return the pixel x-coordinate in the window corresponding to

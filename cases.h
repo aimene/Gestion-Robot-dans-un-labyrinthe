@@ -4,6 +4,7 @@
 #include "fenetre.h"
 #include"terrain.h"
 using namespace::affichage;
+namespace affichage { class fenetre; }
 namespace gestionRobotTerrain
 {
 

@@ -67,7 +67,10 @@ void fenetre::wait(int ms)
 {
   delay(ms);
 }
-
+void fenetre::traceLigneDe(const point& point1,const point& point2)
+{
+    line(point1.x(),point1.y(),point2.x(),point2.y());
+}
 
 
 }
