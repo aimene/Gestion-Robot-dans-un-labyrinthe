@@ -9,7 +9,7 @@ class caseMur : public cases
     public:
         caseMur(int segment, bool mur = true);
         ~caseMur();
-        virtual void dessineCases(const fenetre& fenetre) ;
+        virtual void dessineCases(const fenetre& fenetre)const ;
         bool estMur() const ;
         void changerMurValeur(bool change) ;
     private:

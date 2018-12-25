@@ -45,13 +45,11 @@
 		<Unit filename="fenetreAffichage.h" />
 		<Unit filename="graphics.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="mur.cpp" />
 		<Unit filename="point.cpp" />
 		<Unit filename="point.h" />
 		<Unit filename="robot.cpp" />
 		<Unit filename="robot.h" />
 		<Unit filename="robotAvance.h" />
-		<Unit filename="std.h" />
 		<Unit filename="terrain.cpp" />
 		<Unit filename="terrain.h" />
 		<Unit filename="test.cpp" />

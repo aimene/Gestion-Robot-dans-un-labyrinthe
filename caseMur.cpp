@@ -19,8 +19,9 @@ void caseMur::changerMurValeur(bool change)
 {
    d_mur = change;
 }
-void caseMur::dessineCases(const fenetre& fenetre)
+void caseMur::dessineCases(const fenetre& fenetre) const
 {}
+
 
 }
 

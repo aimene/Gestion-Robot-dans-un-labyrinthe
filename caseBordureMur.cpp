@@ -1,6 +1,9 @@
 #include "caseBordureMur.h"
-#include "terrain.h"
-#include"cases.h"
+
+
+
+
+
 namespace gestionRobotTerrain
 {
     caseBordureMur::caseBordureMur(int segment,bool murGauche,bool murDroit,bool murBas,bool murHaut):cases{segment},d_gauche{murGauche},d_droit{murDroit},d_bas{murBas},d_haut{murHaut}
@@ -37,9 +40,36 @@ namespace gestionRobotTerrain
     {
         d_haut = change ;
     }
-    void caseBordureMur::dessineCases(const fenetre& fenetre)
-
+    void caseBordureMur::dessineCases(const fenetre& fenetre,const terrain& terrain) const
     {
+        int x1,y1,x2,y2;
+        point point1;
+        point point2;
+        if(estMurGauche())
+        {
+            x1 = terrain.position().x();
+            y1 = terrain.position().y();
+            x2 = x1;
+            y2 = y1 + terrain.hauteur();
+            point1 = {x1,y2};
+            point2 = {x2,y2};
+            fenetre.dessineSegment(point1,point2);
+        }
+        else if(estMurHaut())
+        {
+          x1 = terrain.position().x();
+          y1 = terrain.position().y();
+          x2 = x1 + terrain.largeur();
+          y2 = y1 + terrain.hauteur();
+        }
+        else if(estMurDroit())
+        {
+
+        }
+        else if(estMurBas())
+        {
+
+        }
 
     }
 

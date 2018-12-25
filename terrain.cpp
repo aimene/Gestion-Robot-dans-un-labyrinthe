@@ -9,8 +9,7 @@ using namespace std;
 
 namespace gestionRobotTerrain
 {
-    using std::string;
-    using std::vector;
+
 
 terrain::terrain(const string& nomFichier):d_nomFichier{nomFichier}
 {
@@ -23,6 +22,7 @@ terrain::terrain(const point & position, const string& nomFichier,const vector<v
 
     changeHauteur(d_terrain.size());
     changeLargeur(d_terrain[0].size());
+
 
 }
 
@@ -46,7 +46,10 @@ int terrain::largeur() const
 {
     return d_largeur;
 }
-
+const point& terrain::position() const
+{
+    return d_position;
+}
 const string& terrain::nomFichier() const
 {
     return d_nomFichier;
