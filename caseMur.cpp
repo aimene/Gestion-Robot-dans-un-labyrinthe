@@ -15,7 +15,7 @@ bool caseMur::estMur() const
 {
     return d_mur;
 }
-void caseMur::changerMurValeur(bool change)
+void caseMur::changeMurValeur(bool change)
 {
    d_mur = change;
 }

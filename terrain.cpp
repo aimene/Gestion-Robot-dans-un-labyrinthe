@@ -1,8 +1,4 @@
 #include "terrain.h"
-#include <fstream>
-#include<vector>
-#include"cases.h"
-#include<string.h>
 #include"caseMur.h"
 #include"caseBordureMur.h"
 using namespace std;
@@ -89,71 +85,97 @@ void terrain::changeNomFichier(const string& nomFichier)
 
 bool terrain::litTerrain()
 {
+    std::cout<<"avvant de lire le ficher " << std::endl;
     ifstream fichier(string{repertoire+d_nomFichier}); // on ouvre le fichier en lecture
+
 
     if(fichier)  // si l'ouverture a réussi
     {
-        char isMur ='1';
+
         fichier>> d_position;
+        std::cout<<"d_position = " <<d_position<< std::endl;
         fichier>> d_hauteur;
+
         fichier>> d_largeur;
         fichier>> d_type;
+        fichier>> d_tailleCase;
         string ligne ;
 
+
         if(type()==1)
-        {
-            for(int i=0 ; i< hauteur(); ++i )
-            {
-                getline(fichier, ligne);
-
-                for(int j=0; j < largeur(); ++j)
-                {
-                    caseMur* caseMurs = new caseMur{false};
-                    if(ligne[j]==isMur)
-                        caseMurs->changeValeurMur(true);
-                    else
-                        caseMurs->changeValeurMur(false);
-
-                    d_terrain[i][j]=caseMurs;
-                }
-            }
-        }
+            litCaseMur(fichier,ligne);
         else
-        {
-            for(int i=0 ; i< hauteur(); ++i )
-            {
-                getline(fichier, ligne);
+            litCaseBordureMur(fichier,ligne);
 
-                for(int j=0; j < largeur(); j+4)
-                {
-                    caseBordureMur* caseborduremur= new caseBordureMur{false,false,false,false};
-                    if(ligne[j]==isMur)
-                        caseborduremur->changeMurGauche(true);
-                    else
-                       caseborduremur->changeMurGauche(false);
-                    if(ligne[j+1]==isMur)
-                        caseborduremur->changeMurHaut(true);
-                    else
-                       caseborduremur->changeMurHaut(false);
-                    if(ligne[j+2]==isMur)
-                      caseborduremur->changeMurDroit(true);
-                    else
-                       caseborduremur->changeMurDroit(false);
-                    if(ligne[j+3]==isMur)
-                      caseborduremur->changeMurBas(true);
-                    else
-                       caseborduremur->changeMurBas(false);
-
-                   terrainMatriceModifieCase()[i][j]=caseborduremur;
-                }
-
-            }
-        }
+        std::cout<<"fin = " << std::endl;
         fichier.close();
         return true ;
     }
     else
         return false;
+}
+
+void terrain::litCaseMur(std::ifstream& fichier,string& ligne)
+{
+    std::cout<<" litCaseMur " << std::endl;
+
+
+    for(int i=0 ; i< hauteur(); ++i )
+    {
+
+        fichier>> ligne;
+
+        vector<cases*> colonne ;
+        colonne.reserve(largeur());
+
+        for(int j=0; j < largeur(); ++j)
+        {
+            caseMur* caseMurs = new caseMur{false};
+
+            if(ligne[j]==isMur)
+                caseMurs->changeMurValeur(true);
+            else
+                caseMurs->changeMurValeur(false);
+
+            colonne.push_back(caseMurs);
+
+        }
+        d_terrain.push_back(colonne);
+
+    }
+
+}
+
+void terrain::litCaseBordureMur(std::ifstream& fichier,string& ligne)
+{
+    for(int i=0 ; i< hauteur(); ++i )
+    {
+        getline(fichier, ligne);
+
+        for(int j=0; j < largeur(); j+4)
+        {
+            caseBordureMur* caseborduremur= new caseBordureMur{false,false,false,false};
+            if(ligne[j]==isMur)
+                caseborduremur->changeMurGauche(true);
+            else
+                caseborduremur->changeMurGauche(false);
+            if(ligne[j+1]==isMur)
+                caseborduremur->changeMurHaut(true);
+            else
+                caseborduremur->changeMurHaut(false);
+            if(ligne[j+2]==isMur)
+                caseborduremur->changeMurDroit(true);
+            else
+                caseborduremur->changeMurDroit(false);
+            if(ligne[j+3]==isMur)
+                caseborduremur->changeMurBas(true);
+            else
+                caseborduremur->changeMurBas(false);
+
+            terrainMatriceModifieCase()[i][j]=caseborduremur;
+        }
+
+    }
 }
 
 void terrain::sauveTerrain()
@@ -163,7 +185,15 @@ void terrain::sauveTerrain()
 
 void terrain::dessineTerrain(fenetre& fenetre)
 {
-
+    fenetre.open();
+    for(int i = 0 ; i< hauteur(); ++i)
+    {
+        for(int j = 0 ; j< largeur(); ++j)
+        {
+            d_terrain[i][j]->dessineCases(fenetre, *this, i, j);
+        }
+    }
+    fenetre.repeteJusquaBouton();
 }
 
 

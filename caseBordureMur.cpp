@@ -52,7 +52,7 @@ namespace gestionRobotTerrain
             y2 = y1 + terrain.tailleCase();
             hautGauche = {x1,y2};
             basGauche= {x2,y2};
-            fenetre.dessineterrain.tailleCase(hautGauche,basGauche);
+            fenetre.dessineSegment(hautGauche,basGauche);
         }
         else if(estMurHaut())
         {
@@ -62,7 +62,7 @@ namespace gestionRobotTerrain
           y2 = y1 + terrain.tailleCase() ;
           hautGauche = {x1,y2};
           hautDroit = {x2,y2};
-          fenetre.dessineterrain.tailleCase(hautGauche,hautDroit);
+          fenetre.dessineSegment(hautGauche,hautDroit);
         }
         else if(estMurDroit())
         {
@@ -72,7 +72,7 @@ namespace gestionRobotTerrain
             y2 = y1 + ligne * terrain.tailleCase() + terrain.tailleCase();
             hautDroit = {x1,y2};
             basDroit = {x2,y2};
-            fenetre.dessineterrain.tailleCase(hautDroit,basDroit);
+            fenetre.dessineSegment(hautDroit,basDroit);
         }
         else if(estMurBas())
         {
@@ -82,7 +82,7 @@ namespace gestionRobotTerrain
            y2 = terrain.position().y()+ ligne * terrain.tailleCase() + terrain.tailleCase();
            basDroit = {x1,y2};
            basGauche = {x2,y2};
-           fenetre.dessineterrain.tailleCase(basDroit,basGauche);
+           fenetre.dessineSegment(basDroit,basGauche);
         }
 
     }

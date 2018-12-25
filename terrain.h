@@ -1,5 +1,8 @@
 #ifndef TERRAIN_H
 #define TERRAIN_H
+#include<string.h>
+
+#include <fstream>
 
 #include <iostream>
 #include "point.h"
@@ -43,14 +46,15 @@ public:
     void changeNomFichier(const string& nomFichier);
 
     bool litTerrain();
-    void litCaseMur();
-    void litCaseBordureMur();
+    void litCaseMur(std::ifstream& fichier,string& ligne);
+    void litCaseBordureMur(std::ifstream& fichier,string& ligne);
 
     void sauveTerrain() ;
 
 
     void dessineTerrain(fenetre& fenetre);
 
+    const  char isMur ='1';
     const string repertoire ="terrain/";
 private:
     void changeHauteur( int hauteur);

@@ -9,9 +9,9 @@ class caseMur : public cases
     public:
         caseMur( bool mur = true);
         ~caseMur();
-        virtual void dessineCases(const fenetre& fenetre,const terrain& terrain,int ligne,int colonne)const ;
+        virtual void dessineCases(const fenetre& fenetre,const terrain& terrain,int ligne,int colonne)const override ;
         bool estMur() const ;
-        void changerMurValeur(bool change) ;
+        void changeMurValeur(bool change) ;
     private:
         bool d_mur ; // vrai si mur
 };
