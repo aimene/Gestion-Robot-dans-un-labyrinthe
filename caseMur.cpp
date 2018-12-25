@@ -19,10 +19,10 @@ void caseMur::changeMurValeur(bool change)
 {
    d_mur = change;
 }
-void caseMur::dessineCases(const fenetre& fenetre,const terrain& terrain, int ligne , int colonne) const
+void caseMur::dessineMur(const fenetre& fenetre,const terrain& terrain, int ligne , int colonne) const
 {
     int x1,y1,x2,y2;
-    point basGauche, hautDroit ;
+    point basGauche,hautDroit ;
    if (estMur())
    {
        x1 = terrain.position().x() + colonne*terrain.tailleCase() ;
@@ -33,6 +33,10 @@ void caseMur::dessineCases(const fenetre& fenetre,const terrain& terrain, int li
        hautDroit = {x2,y2};
        fenetre.dessineRectanglePlein(basGauche,hautDroit);
    }
+}
+void caseMur::dessineCases(const fenetre& fenetre,const terrain& terrain, int ligne , int colonne) const
+{
+    dessineMur(fenetre,terrain,ligne,colonne);
 }
 
 
