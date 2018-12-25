@@ -6,7 +6,7 @@
 
 namespace gestionRobotTerrain
 {
-    caseBordureMur::caseBordureMur(int segment,bool murGauche,bool murDroit,bool murBas,bool murHaut):cases{segment},d_gauche{murGauche},d_droit{murDroit},d_bas{murBas},d_haut{murHaut}
+    caseBordureMur::caseBordureMur(bool murGauche,bool murDroit,bool murBas,bool murHaut):d_gauche{murGauche},d_droit{murDroit},d_bas{murBas},d_haut{murHaut}
     {}
     bool caseBordureMur::estMurGauche()const
     {
@@ -46,43 +46,43 @@ namespace gestionRobotTerrain
         point basGauche,hautGauche,basDroit,hautDroit;
         if(estMurGauche())
         {
-            x1 = terrain.position().x() + colonne * segment();
-            y1 = terrain.position().y() + ligne * segment();
+            x1 = terrain.position().x() + colonne * terrain.tailleCase();
+            y1 = terrain.position().y() + ligne * terrain.tailleCase();
             x2 = x1;
-            y2 = y1 + segment();
+            y2 = y1 + terrain.tailleCase();
             hautGauche = {x1,y2};
             basGauche= {x2,y2};
-            fenetre.dessineSegment(hautGauche,basGauche);
+            fenetre.dessineterrain.tailleCase(hautGauche,basGauche);
         }
         else if(estMurHaut())
         {
-          x1 = terrain.position().x() + colonne *segment();
-          y1 = terrain.position().y() + ligne * segment();
-          x2 = x1 + colonne * segment() + segment();
-          y2 = y1 + segment() ;
+          x1 = terrain.position().x() + colonne *terrain.tailleCase();
+          y1 = terrain.position().y() + ligne * terrain.tailleCase();
+          x2 = x1 + colonne * terrain.tailleCase() + terrain.tailleCase();
+          y2 = y1 + terrain.tailleCase() ;
           hautGauche = {x1,y2};
           hautDroit = {x2,y2};
-          fenetre.dessineSegment(hautGauche,hautDroit);
+          fenetre.dessineterrain.tailleCase(hautGauche,hautDroit);
         }
         else if(estMurDroit())
         {
-            x1 = terrain.position().x() + colonne * segment() + segment();
-            y1 = terrain.position().y() + colonne * segment();
+            x1 = terrain.position().x() + colonne * terrain.tailleCase() + terrain.tailleCase();
+            y1 = terrain.position().y() + colonne * terrain.tailleCase();
             x2 = x1;
-            y2 = y1 + ligne * segment() + segment();
+            y2 = y1 + ligne * terrain.tailleCase() + terrain.tailleCase();
             hautDroit = {x1,y2};
             basDroit = {x2,y2};
-            fenetre.dessineSegment(hautDroit,basDroit);
+            fenetre.dessineterrain.tailleCase(hautDroit,basDroit);
         }
         else if(estMurBas())
         {
-           x1 = terrain.position().x() + colonne * segment() + segment();
-           y1 = terrain.position().y() + ligne * segment();
-           x2 = terrain.position().x() + colonne * segment();
-           y2 = terrain.position().y()+ ligne * segment() + segment();
+           x1 = terrain.position().x() + colonne * terrain.tailleCase() + terrain.tailleCase();
+           y1 = terrain.position().y() + ligne * terrain.tailleCase();
+           x2 = terrain.position().x() + colonne * terrain.tailleCase();
+           y2 = terrain.position().y()+ ligne * terrain.tailleCase() + terrain.tailleCase();
            basDroit = {x1,y2};
            basGauche = {x2,y2};
-           fenetre.dessineSegment(basDroit,basGauche);
+           fenetre.dessineterrain.tailleCase(basDroit,basGauche);
         }
 
     }
