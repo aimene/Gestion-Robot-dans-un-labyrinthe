@@ -33,8 +33,11 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename=".gitignore" />
+		<Unit filename="caseBordureMur.cpp" />
 		<Unit filename="caseBordureMur.h" />
+		<Unit filename="caseMur.cpp" />
 		<Unit filename="caseMur.h" />
+		<Unit filename="cases.cpp" />
 		<Unit filename="cases.h" />
 		<Unit filename="fenetre.cpp" />
 		<Unit filename="fenetre.h" />
@@ -42,7 +45,6 @@
 		<Unit filename="fenetreAffichage.h" />
 		<Unit filename="graphics.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="mur.cpp" />
 		<Unit filename="point.cpp" />
 		<Unit filename="point.h" />
 		<Unit filename="robot.cpp" />

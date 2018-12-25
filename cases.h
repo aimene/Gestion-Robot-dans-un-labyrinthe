@@ -2,23 +2,27 @@
 #define CASES_H
 
 #include "fenetre.h"
-#include "terrain.h"
-
+#include"terrain.h"
 using namespace::affichage;
+namespace affichage { class fenetre; }
 namespace gestionRobotTerrain
 {
+class terrain ;
 class cases
 {
 public:
    cases(int segment);
    virtual ~cases();
-   virtual void dessineCases(const fenetre& fenetre) = 0;
+   virtual void dessineCases(const fenetre& fenetre,const terrain& terrain) const = 0;
+
    int segment() const;
    void changeSegment(int segment) ;
 
 private :
 int d_segment;
 };
+
+
 }
 
-#endif //CASES_H
+#endif //CASE_H
