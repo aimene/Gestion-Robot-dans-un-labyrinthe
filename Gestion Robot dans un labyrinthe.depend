@@ -39,13 +39,13 @@
 
 1545662159 fichage.h"
 
-1545658464 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\fenetre.cpp
+1545747233 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\fenetre.cpp
 	<cmath>
 	"fenetre.h"
 	"graphics.h"
 	"fenetreAffichage.h"
 
-1545659475 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\fenetre.h
+1545747233 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\fenetre.h
 	<iostream>
 	"point.h"
 	"fenetreAffichage.h"
@@ -97,16 +97,15 @@
 1545667327 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\cases.cpp
 	"cases.h"
 
-1545743259 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\cases.h
+1545747712 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\cases.h
 	"fenetre.h"
 	"terrain.h"
 
-1545743808 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\terrain.h
+1545747579 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\terrain.h
 	<iostream>
 	"point.h"
 	<vector>
-	<string>
-	"std.h"
+	<string.h>
 	"cases.h"
 
 1545668940 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\caseborduremur.cpp
@@ -117,13 +116,15 @@
 1545668929 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\caseborduremur.h
 	"cases.h"
 
-<<<<<<< HEAD
-1545740735 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\casemur.cpp
+1545668929 D
+
+1545747234 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\casemur.cpp
+	"cases.h"
 	"caseMur.h"
 	"fenetre.h"
 	"terrain.h"
 
-1545668912 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\casemur.h
+1545747233 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\casemur.h
 	"cases.h"
 
 1545746976 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\terrain.cpp
@@ -134,7 +135,9 @@
 	<string.h>
 	"caseMur.h"
 	"caseBordureMur.h"
-=======
+
+1545746976 reMur.h"
+
 1545636728 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\caseborduremur.cpp
 	"caseBordureMur.h"
 	"terrain.h"
@@ -160,5 +163,6 @@
 
 1545691891 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\casemur.h
 	"cases.h"
->>>>>>> b4992c3b0418af10806689722c8bfd7374af0f2e
+
+1545691891 92c3b0418af10806689722c8bfd7374af0f2e
 

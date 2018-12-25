@@ -2,15 +2,12 @@
 #define CASES_H
 
 #include "fenetre.h"
-#include "terrain.h"
-
+#include"terrain.h"
 using namespace::affichage;
+namespace affichage { class fenetre; }
 namespace gestionRobotTerrain
 {
-<<<<<<< HEAD
 
-=======
->>>>>>> b4992c3b0418af10806689722c8bfd7374af0f2e
 class cases
 {
 public:
@@ -25,4 +22,4 @@ int d_segment;
 };
 }
 
-#endif //CASES_H
+#endif //CASE_H
