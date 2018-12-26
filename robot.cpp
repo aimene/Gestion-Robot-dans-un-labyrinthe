@@ -1,7 +1,7 @@
 #include "robot.h"
 #include "point.h"
 #include "terrain.h"
-
+using gestionRobotTerrain::robot;
 
 namespace gestionRobotTerrain
 {
@@ -15,7 +15,7 @@ namespace gestionRobotTerrain
     {
       d_direction = direction;
     }
-    int robot::positionRobot() const
+    point robot::positionRobot() const
     {
         return d_position;
     }
@@ -23,7 +23,7 @@ namespace gestionRobotTerrain
     {
        d_position = position;
     }
-     void robot::tournerGauche()
+     void robot::tourneGauche()
     {
        switch(d_direction)
        {
@@ -42,7 +42,7 @@ namespace gestionRobotTerrain
        }
     }
 
-    void robot::tournerDroite()
+    void robot::tourneDroite()
     {
           switch(d_direction)
        {
@@ -64,7 +64,7 @@ namespace gestionRobotTerrain
     {
 
     }
-    void robot::avanceCase()
+    void robot::avanceCase(const terrain& terrain)
     {
 
     }

@@ -22,10 +22,10 @@ public:
     void changeDirection(int direction);
     void tourneDroite();
     void tourneGauche();
-    const int EST = 1;
-    const int NORD = 2;
-    const int OUEST = 3;
-    const int SUD = 4;
+    static const int EST = 1;
+    static const int NORD = 2;
+    static const int OUEST = 3;
+    static const int SUD = 4;
 private:
     point d_position;
     int   d_direction;
