@@ -3,6 +3,7 @@
 #include "terrain.h"
 using gestionRobotTerrain::robot;
 
+
 namespace gestionRobotTerrain
 {
 robot::robot(const point& position, int direction):d_position{position},d_direction{direction}
@@ -60,12 +61,16 @@ void robot::tourneGauche()
         break;
     }
 }
+
 bool robot::detecteObstacleDevant(const terrain& terrain)
 {
 
 }
+
 void robot::avanceCase(const terrain& terrain)
 {
+
+
 
 }
 
