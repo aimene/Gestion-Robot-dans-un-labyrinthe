@@ -17,11 +17,11 @@ public:
     void dessineRobot(const terrain& terrain);
     bool detecteObstacleDevant(const terrain& terrain);
     void avanceCase(const terrain& terrain);
-    void changerPositionRobot(const point& position);
+    void changePositionRobot(const point& position);
     int direction() const;
-    void changerDirection(int direction);
-    void tournerDroite(const int angleEnDegre = 90);
-    void tournerGauche(const int angleEnDegre = 90);
+    void changeDirection(int direction);
+    void tourneDroite();
+    void tourneGauche();
     const int EST = 1;
     const int NORD = 2;
     const int OUEST = 3;
