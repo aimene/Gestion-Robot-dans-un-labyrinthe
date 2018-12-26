@@ -17,6 +17,7 @@ bool caseMur::estMur() const
 }
 void caseMur::changeMurValeur(bool change)
 {
+
     d_mur = change;
 }
 point caseMur::basGauche(const terrain& terrain, int ligne, int colonne) const
@@ -47,6 +48,7 @@ void caseMur::dessineCases(const fenetre& fenetre,const terrain& terrain, int li
                                       hautDroit(terrain, ligne , colonne),basDroit(terrain, ligne , colonne));
     }
 }
+
 
 
 }

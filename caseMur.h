@@ -10,6 +10,7 @@ class caseMur : public cases
         caseMur( bool mur = true);
         ~caseMur();
         virtual void dessineCases(const fenetre& fenetre,const terrain& terrain,int ligne,int colonne)const override ;
+        void dessineMur(const fenetre& fenetre,const terrain& terrain, int ligne , int colonne) const ;
         bool estMur() const ;
         void changeMurValeur(bool change) ;
 
