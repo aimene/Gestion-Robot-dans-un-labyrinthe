@@ -17,22 +17,35 @@ bool caseMur::estMur() const
 }
 void caseMur::changeMurValeur(bool change)
 {
-   d_mur = change;
+    d_mur = change;
 }
-void caseMur::dessineCases(const fenetre& fenetre,const terrain& terrain, int ligne , int colonne) const
+point caseMur::basGauche(const terrain& terrain, int ligne, int colonne) const
 {
-    int x1,y1,x2,y2;
-    point basGauche, hautDroit ;
-   if (estMur())
-   {
-       x1 = terrain.position().x() + colonne*terrain.tailleCase() ;
-       y1 = terrain.position().y() + ligne*terrain.tailleCase() + terrain.tailleCase();
-       x2 = terrain.position().x() + colonne*terrain.tailleCase()+terrain.tailleCase();
-       y2 = terrain.position().y() + ligne*terrain.tailleCase();
-       basGauche = {x1,y1};
-       hautDroit = {x2,y2};
-       fenetre.dessineRectanglePlein(basGauche,hautDroit);
-   }
+    return point{terrain.position().x() + colonne*terrain.tailleCase() ,terrain.position().y() + ligne*terrain.tailleCase() + terrain.tailleCase()} ;
+}
+
+point caseMur::basDroit(const terrain& terrain ,int ligne, int colonne) const
+{
+    return point{terrain.position().x() + colonne*terrain.tailleCase()+terrain.tailleCase() ,terrain.position().y() + ligne*terrain.tailleCase() + terrain.tailleCase()} ;
+}
+
+point caseMur::hautGauche(const terrain& terrain, int ligne, int colonne) const
+{
+    return point{terrain.position().x() + colonne*terrain.tailleCase() ,terrain.position().y() + ligne*terrain.tailleCase()} ;
+}
+
+point caseMur::hautDroit(const terrain& terrain ,int ligne, int colonne) const
+{
+    return point{terrain.position().x() + colonne*terrain.tailleCase()+terrain.tailleCase() ,terrain.position().y() + ligne*terrain.tailleCase() } ;
+
+}
+void caseMur::dessineCases(const fenetre& fenetre,const terrain& terrain, int ligne, int colonne) const
+{
+    if (estMur())
+    {
+        fenetre.dessineRectanglePlein(basGauche(terrain, ligne , colonne),hautGauche(terrain , ligne , colonne),
+                                      hautDroit(terrain, ligne , colonne),basDroit(terrain, ligne , colonne));
+    }
 }
 
 
