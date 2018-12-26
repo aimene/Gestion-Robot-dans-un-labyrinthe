@@ -13,6 +13,9 @@ class caseMur : public cases
         void dessineMur(const fenetre& fenetre,const terrain& terrain, int ligne , int colonne) const ;
         bool estMur() const ;
         void changeMurValeur(bool change) ;
+
+
+
     private:
         bool d_mur ; // vrai si mur
 };

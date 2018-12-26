@@ -20,10 +20,7 @@ public:
     void changeMurDroit(bool change);
     void changeMurHaut(bool change);
     void changeMurBas(bool change);
-    void dessineBordureGauche(const fenetre& fenetre,const terrain& terrain,int ligne,int colonne) const;
-    void dessineBordureDroite(const fenetre& fenetre,const terrain& terrain,int ligne,int colonne) const;
-    void dessineBordureHaute(const fenetre& fenetre,const terrain& terrain,int ligne,int colonne) const;
-    void dessineBordureBasse(const fenetre& fenetre,const terrain& terrain,int ligne,int colonne) const;
+
 private:
    bool d_gauche, d_droit , d_bas , d_haut ;
 };

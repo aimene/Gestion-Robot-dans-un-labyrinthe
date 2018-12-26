@@ -102,10 +102,13 @@ bool terrain::litTerrain()
         string ligne ;
 
 
-        if(type()==1)
+        if(type()==typeCaseMur)
             litCaseMur(fichier,ligne);
-        else
-            litCaseBordureMur(fichier,ligne);
+        else{
+            if(type()==typeCaseBordureMur)
+                litCaseBordureMur(fichier,ligne);
+        }
+
 
         std::cout<<"fin = " << std::endl;
         fichier.close();
@@ -118,13 +121,9 @@ bool terrain::litTerrain()
 void terrain::litCaseMur(std::ifstream& fichier,string& ligne)
 {
     std::cout<<" litCaseMur " << std::endl;
-
-
     for(int i=0 ; i< hauteur(); ++i )
     {
-
         fichier>> ligne;
-
         vector<cases*> colonne ;
         colonne.reserve(largeur());
 
@@ -150,10 +149,14 @@ void terrain::litCaseBordureMur(std::ifstream& fichier,string& ligne)
 {
     for(int i=0 ; i< hauteur(); ++i )
     {
-        getline(fichier, ligne);
+        fichier>> ligne;
+        vector<cases*> colonne ;
+        colonne.reserve(largeur());
+        std::cout<<" largeur() " << largeur()<<std::endl;
 
-        for(int j=0; j < largeur(); j+4)
+        for(int j=0; j < largeur()*4; j+=4)
         {
+
             caseBordureMur* caseborduremur= new caseBordureMur{false,false,false,false};
             if(ligne[j]==isMur)
                 caseborduremur->changeMurGauche(true);
@@ -172,9 +175,13 @@ void terrain::litCaseBordureMur(std::ifstream& fichier,string& ligne)
             else
                 caseborduremur->changeMurBas(false);
 
-            terrainMatriceModifieCase()[i][j]=caseborduremur;
+          /*  std::cout<<" caseborduremur->estMurHaut() " <<caseborduremur->estMurHaut()<< std::endl;
+            std::cout<<" caseborduremur->estMurHaut() " <<caseborduremur->estMurHaut()<< std::endl;
+            std::cout<<" caseborduremur->estMurGauche()" <<caseborduremur->estMurGauche()<< std::endl;
+            std::cout<<"caseborduremur->estMurDroit()" <<caseborduremur->estMurDroit()<< std::endl;*/
+            colonne.push_back(caseborduremur);
         }
-
+    d_terrain.push_back(colonne);
     }
 }
 
