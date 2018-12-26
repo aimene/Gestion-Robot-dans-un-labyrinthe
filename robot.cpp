@@ -1,6 +1,7 @@
 #include "robot.h"
 #include "point.h"
 #include "terrain.h"
+
 using gestionRobotTerrain::robot;
 
 namespace gestionRobotTerrain
@@ -68,7 +69,10 @@ void robot::avanceCase(const terrain& terrain)
 {
 
 }
+void robot::dessineRobot(const terrain& terrain)
+{
 
+}
 
 
 }
