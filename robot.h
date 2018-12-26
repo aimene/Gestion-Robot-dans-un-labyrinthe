@@ -4,7 +4,9 @@
 #include <iostream>
 #include "point.h"
 #include "terrain.h"
-
+#include"cases.h"
+#include"caseMur.h"
+#include"caseBordureMur.h"
 using namespace geom;
 namespace gestionRobotTerrain {
 class robot
@@ -16,7 +18,7 @@ public:
     point positionRobot() const;
     void dessineRobot(const terrain& terrain);
     bool detecteObstacleDevant(const terrain& terrain);
-    void avanceCase(const terrain& terrain);
+    bool avanceCase(const terrain& terrain);
     void changePositionRobot(const point& position);
     int direction() const;
     void changeDirection(int direction);
