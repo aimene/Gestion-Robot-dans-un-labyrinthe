@@ -1,6 +1,7 @@
 #include "robot.h"
 #include "point.h"
 #include "terrain.h"
+
 using gestionRobotTerrain::robot;
 
 
@@ -153,7 +154,10 @@ bool robot::avanceCase(const terrain& terrain)
     }
 
 }
+void robot::dessineRobot(const terrain& terrain)
+{
 
+}
 
 
 }
