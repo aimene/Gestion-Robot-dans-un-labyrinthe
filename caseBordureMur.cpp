@@ -49,7 +49,6 @@ namespace gestionRobotTerrain
 
     void caseBordureMur::dessineCases(const fenetre& fenetre,const terrain& terrain,int ligne,int colonne) const
     {
-
         if(estMurGauche())
         {
             fenetre.dessineSegment(hautGauche(terrain,ligne,colonne),basGauche(terrain,ligne,colonne));
