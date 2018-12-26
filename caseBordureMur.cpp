@@ -86,23 +86,17 @@ namespace gestionRobotTerrain
     }
     void caseBordureMur::dessineCases(const fenetre& fenetre,const terrain& terrain,int ligne,int colonne) const
     {
-
         if(estMurGauche())
-        {
             dessineBordureGauche(fenetre,terrain,ligne,colonne);
-        }
+
         if(estMurHaut())
-        {
           dessineBordureDroite(fenetre,terrain,ligne,colonne);
-        }
-        else if(estMurDroit())
-        {
+
+        if(estMurDroit())
            dessineBordureDroite(fenetre,terrain,ligne,colonne);
-        }
-        else if(estMurBas())
-        {
+
+        if(estMurBas())
            dessineBordureBasse(fenetre,terrain,ligne,colonne);
-        }
 
     }
 
