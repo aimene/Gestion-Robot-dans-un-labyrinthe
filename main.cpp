@@ -10,7 +10,7 @@ int main()
 {
 
   fenetre fenetre {900,900};
-  terrain terrain{"terrain1.txt"};
+  terrain terrain{"terrain0.txt"};
   terrain.dessineTerrain(fenetre);
     return 0;
 }
