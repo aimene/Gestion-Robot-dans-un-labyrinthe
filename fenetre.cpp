@@ -73,9 +73,17 @@ void fenetre::dessineSegment(const point& point1,const point& point2) const
 {
     line(point1.x(),point1.y(),point2.x(),point2.y());
 }
-void fenetre::dessineRectanglePlein(const point& basGauche, const point& hautDroit) const
+void fenetre::dessineRectangle(const point& basGauche, const point& hautDroit) const
 {
     rectangle(basGauche.x(),basGauche.y(),hautDroit.x(),hautDroit.y());
+}
+void fenetre::dessineRectanglePlein(const point& basGauche, const point& hautGauche,const point& hautDroit,const point& basDroit) const
+{
+    int tab []= {basGauche.x(),basGauche.y(),hautGauche.x(),hautGauche.y(),
+                 hautDroit.x(),hautDroit.y(),basDroit.x(),basDroit.y(),
+                 basGauche.x(),basGauche.y()};
+
+    fillpoly(5,tab);
 }
 
 

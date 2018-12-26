@@ -54,6 +54,8 @@ public:
 
     void dessineTerrain(fenetre& fenetre);
 
+    const  int typeCaseMur = 1 ;
+    const  int typeCaseBordureMur = 0 ;
     const  char isMur ='1';
     const string repertoire ="terrain/";
 private:
