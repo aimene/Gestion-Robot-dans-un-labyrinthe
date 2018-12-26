@@ -25,4 +25,4 @@ public:
 
 }
 
-#endif //CASE_H
+#endif //CASES_H

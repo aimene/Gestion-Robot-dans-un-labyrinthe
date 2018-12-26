@@ -17,7 +17,6 @@ bool caseMur::estMur() const
 }
 void caseMur::changeMurValeur(bool change)
 {
-
     d_mur = change;
 }
 
