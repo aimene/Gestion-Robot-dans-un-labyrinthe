@@ -186,31 +186,19 @@ void terrain::litCaseBordureMur(std::ifstream& fichier,string& ligne)
 
 void terrain::sauveTerrain()
 {
-    cout<<"Le nom du fichier"<<endl;
-    cin>>d_nomFichier;
-    ofstream fichier(string{repertoire+d_nomFichier+".txt"});
-    cout<<"La position "<<endl;
-    cin>>d_position;
-    fichier<<d_position<<endl;
-    cout<<"La hauteur "<<endl;
-    cin>>d_hauteur;
-    fichier<<d_hauteur<<endl;
-    cout<<"La largeur "<<endl;
-    cin>>d_largeur;
-    fichier<<d_largeur<<endl;
-    cout<<"Le type "<<endl;
-    cin>>d_type;
-    fichier<<d_type<<endl;
-    cout<<"La taille de la case en pixel "<<endl;
-    cin>>d_tailleCase;
-    fichier<<d_tailleCase<<endl;
-    char valeur;
-    for(int i = 0;i<d_hauteur;++i)
+
+    ofstream fichier(string{repertoire+nomFichier()+".txt"});
+    fichier<<nomFichier()<<endl;
+    fichier<<position()<<endl;
+    fichier<<hauteur()<<endl;
+    fichier<<largeur()<<endl;
+    fichier<<type()<<endl;
+    fichier<<tailleCase()<<endl;
+    for(int i = 0;i<hauteur();++i)
     {
-        for(int j = 0 ; j<d_largeur;++j)
+        for(int j = 0 ; j<largeur();++j)
         {
-            cin>>valeur;
-            fichier<<valeur;
+            fichier<<terrainMatrice()[i][j];
         }
         fichier<<endl;
     }
