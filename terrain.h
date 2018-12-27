@@ -27,7 +27,7 @@ class terrain
 public:
 
 
-
+    terrain();
     terrain(const string& nomFichier);
     terrain(const point & position, const string& nomFichier, int type ,int tailleCase ,const vector<vector<cases*> > terrainMatrice);
     ~terrain();
