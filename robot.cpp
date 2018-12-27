@@ -17,7 +17,7 @@ void robot::changeDirection(int direction)
 {
     d_direction = direction;
 }
-point robot::positionRobot() const
+const point& robot::positionRobot() const
 {
     return d_position;
 }
@@ -154,12 +154,53 @@ bool robot::avanceCase(const terrain& terrain)
     }
 
 }
-void robot::dessineRobot(const terrain& terrain)
+void robot::dessineRobot(terrain& terrain, fenetre& fenetre)
 {
+
+    int unQuartCase = terrain.tailleCase()/4;
+
+    point basGauche {positionRobot().x()+unQuartCase,positionRobot().y()+unQuartCase};
+    point hautGauche {positionRobot().x()+unQuartCase,positionRobot().y()+3*unQuartCase};
+    point hautDroit {positionRobot().x()+3*unQuartCase,positionRobot().y()+3*unQuartCase};
+    point basDroit {positionRobot().x()+3*unQuartCase,positionRobot().y()+unQuartCase};
+    point directionPoint {pointDirection(unQuartCase)};
+
+    switch(d_direction)
+    {
+    case EST :
+           fenetre.dessinePolyPleinEst(basGauche,hautGauche,hautDroit,basDroit,directionPoint);
+        break;
+    case OUEST:
+           fenetre.dessinePolyPleinOuest(basGauche,hautGauche,hautDroit,basDroit,directionPoint);
+        break;
+    case NORD :
+            fenetre.dessinePolyPleinNord(basGauche,hautGauche,hautDroit,basDroit,directionPoint);
+        break;
+    case SUD :
+           fenetre.dessinePolyPleinSud(basGauche,hautGauche,hautDroit,basDroit,directionPoint);
+        break;
+    }
 
 }
 
-
+point robot::pointDirection(int unQuartCase )
+{
+    switch(d_direction)
+    {
+    case EST :
+        return point{positionRobot().x()+3*unQuartCase+unQuartCase/2,positionRobot().y()+2*unQuartCase};
+        break;
+    case OUEST:
+        return point{positionRobot().x()+unQuartCase/2,positionRobot().y()+2*unQuartCase};
+        break;
+    case NORD :
+        return  point{positionRobot().x()+2*unQuartCase,positionRobot().y()+3*unQuartCase+unQuartCase/2};
+        break;
+    case SUD :
+        return  point{positionRobot().x()+2*unQuartCase,positionRobot().y()+unQuartCase/2};
+        break;
+    }
+}
 }
 
 

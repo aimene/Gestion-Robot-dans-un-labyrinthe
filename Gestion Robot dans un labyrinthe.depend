@@ -48,17 +48,17 @@
 
 1545662159 fichage.h"
 
-1545831370 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\fenetre.cpp
+1545919691 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\fenetre.cpp
 	<cmath>
 	"fenetre.h"
 	"graphics.h"
 	"fenetreAffichage.h"
 
-1545757529 D
+1545872355 D
 
 1545636728 aa769ae333563e56041700de0be4524f65310
 
-1545831344 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\fenetre.h
+1545919736 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\fenetre.h
 	<iostream>
 	"point.h"
 	"fenetreAffichage.h"
@@ -83,11 +83,13 @@
 1545658479 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\fenetreaffichage.cpp
 	"fenetreAffichage.h"
 
-1545835300 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\main.cpp
+1545919037 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\main.cpp
 	<iostream>
 	"terrain.h"
 	"cases.h"
 	"fenetre.h"
+	"robot.h"
+	"point.h"
 
 1545297615 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\mur.cpp
 
@@ -96,12 +98,12 @@
 	<cmath>
 	"point.h"
 
-1545844083 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\robot.cpp
+1545919858 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\robot.cpp
 	"robot.h"
 	"point.h"
 	"terrain.h"
 
-1545844083 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\robot.h
+1545918989 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\robot.h
 	<iostream>
 	"point.h"
 	"terrain.h"
@@ -126,14 +128,14 @@
 
 1545296891 206dc64c059e746062252a681b4c9c390f8b9
 
-1545844083 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\cases.cpp
+1545852187 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\cases.cpp
 	"cases.h"
 
-1545844083 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\cases.h
+1545852187 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\cases.h
 	"fenetre.h"
 	"terrain.h"
 
-1545833175 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\terrain.h
+1545919912 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\terrain.h
 	<string.h>
 	<fstream>
 	<iostream>
@@ -148,16 +150,16 @@
 1545844083 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\caseborduremur.h
 	"cases.h"
 
-1545834964 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\casemur.cpp
+1545852187 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\casemur.cpp
 	"cases.h"
 	"caseMur.h"
 	"fenetre.h"
 	"terrain.h"
 
-1545844083 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\casemur.h
+1545852187 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\casemur.h
 	"cases.h"
 
-1545835786 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\terrain.cpp
+1545918310 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\terrain.cpp
 	"terrain.h"
 	"caseMur.h"
 	"caseBordureMur.h"
@@ -300,13 +302,41 @@
 	"cases.h"
 	"caseMur.h"
 
+1545852124 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\robotavance.cpp
+
 1545872355 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\robotavance.cpp
+
+1545856358 e509d7a568e850fcf85f45ded6f584e442bdc
 	"robotAvance.h"
 	"point.h"
 	"terrain.h"
-
-1545872355 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\robotavance.h
 	"point.h"
 	"robot.h"
 	"terrain.h"
+
+1545852053 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\robotavance.h
+
+1545872355 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\robotavance.h
+
+1545853764 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\visualisationrobotdansterrain.cpp
+	"visualtionRobotDansTerrain.h"
+
+1545853737 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\visualtionrobotdansterrain.h
+	"robotAvance.h"
+
+1545856350 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\programmevisualisation.cpp
+	"programmeVisualisation.h"
+
+1545856334 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\programmevisualisation.h
+	"fenetre.h"
+	"terrain.h"
+	"robot.h"
+
+1545917533 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\programmevisualisationrobot.cpp
+	"programmeVisualisationRobot.h"
+
+1545856358 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\programmevisualisationrobot.h
+	"programmeVisualisation.h"
+
+1545856358 Visualisation.h"
 

@@ -59,6 +59,14 @@ public :
   void dessineSegment(const point& point1,const point& point2) const;
   void dessineRectangle(const point& basGauche, const point& hautDroit) const;
   void dessineRectanglePlein(const point& basGauche, const point& hautGauche,const point& hautDroit,const point& basDroit) const;
+
+  void dessinePolyPleinEst(const point& basGauche, const point& hautGauche,const point& hautDroit,const point& basDroit, const point& direction);
+  void dessinePolyPleinNord(const point& basGauche, const point& hautGauche,const point& hautDroit,const point& basDroit, const point& direction);
+  void dessinePolyPleinOuest(const point& basGauche, const point& hautGauche,const point& hautDroit,const point& basDroit, const point& direction);
+  void dessinePolyPleinSud(const point& basGauche, const point& hautGauche,const point& hautDroit,const point& basDroit, const point& direction);
+
+
+
 /**
   Return the pixel x-coordinate in the window corresponding to
   the x-coordinate in the scene
