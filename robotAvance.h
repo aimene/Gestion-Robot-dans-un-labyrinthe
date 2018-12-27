@@ -9,13 +9,11 @@ namespace gestionRobotTerrain {
 class robotAvance : public robot
 {
 public:
-    robotAvance(const point& position,int direction,int pas);
+    robotAvance(const point& position,int direction);
     ~robotAvance();
-    bool estObstacleSurSaGauche(const terrain& terrain) const ;
-    bool estObstacleSurSaDroite(const terrain& terrain) const;
-private:
-  int d_pas;
-  point d_position;
+    bool estObstacleSurSaGauche(const terrain& terrain)  ;
+    bool estObstacleSurSaDroite(const terrain& terrain) ;
+
 };
 }
 #endif // ROBOTAVANCE_H
