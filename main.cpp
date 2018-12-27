@@ -12,10 +12,10 @@ int main()
 {
 
     fenetre fenetre {900,500};
-    point positionRobot{150,150};
+    point positionRobot{200,350};
     robot robot{positionRobot,1};
-    terrain terrain{"terrain0.txt"};
-     fenetre.open();
+    terrain terrain{"terrainBordureMur1.txt"};
+    fenetre.open();
     terrain.dessineTerrain(fenetre);
 
     std::cout<<" main essineTerrain = "<< std::endl;

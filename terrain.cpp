@@ -89,7 +89,6 @@ bool terrain::litTerrain()
     std::cout<<"avvant de lire le ficher " << std::endl;
     ifstream fichier(string{repertoire+d_nomFichier}); // on ouvre le fichier en lecture
 
-
     if(fichier)  // si l'ouverture a réussi
     {
 
@@ -97,9 +96,9 @@ bool terrain::litTerrain()
         std::cout<<"d_position = " <<d_position<< std::endl;
         fichier>> d_hauteur;
 
-        fichier>> d_largeur;
-        fichier>> d_type;
-        fichier>> d_tailleCase;
+        fichier>>d_largeur;
+        fichier>>d_type;
+        fichier>>d_tailleCase;
         string ligne ;
 
 
@@ -125,7 +124,7 @@ void terrain::litCaseMur(std::ifstream& fichier,string& ligne)
     std::cout<<" litCaseMur " << std::endl;
     for(int i=0 ; i< hauteur(); ++i )
     {
-        fichier>> ligne;
+        fichier>>ligne;
         vector<cases*> colonne ;
         colonne.reserve(largeur());
 
@@ -151,12 +150,12 @@ void terrain::litCaseBordureMur(std::ifstream& fichier,string& ligne)
 {
     for(int i=0 ; i< hauteur(); ++i )
     {
-        fichier>> ligne;
+        fichier>>ligne;
         vector<cases*> colonne ;
         colonne.reserve(largeur());
         std::cout<<" largeur() " << largeur()<<std::endl;
 
-        for(int j=0; j < largeur()*4; j+=4)
+        for(int j=0; j <largeur()*4; j+=4)
         {
 
             caseBordureMur* caseborduremur= new caseBordureMur{false,false,false,false};
@@ -164,14 +163,17 @@ void terrain::litCaseBordureMur(std::ifstream& fichier,string& ligne)
                 caseborduremur->changeMurGauche(true);
             else
                 caseborduremur->changeMurGauche(false);
+
             if(ligne[j+1]==isMur)
                 caseborduremur->changeMurHaut(true);
             else
                 caseborduremur->changeMurHaut(false);
+
             if(ligne[j+2]==isMur)
                 caseborduremur->changeMurDroit(true);
             else
                 caseborduremur->changeMurDroit(false);
+
             if(ligne[j+3]==isMur)
                 caseborduremur->changeMurBas(true);
             else

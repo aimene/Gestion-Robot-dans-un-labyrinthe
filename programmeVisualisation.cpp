@@ -10,7 +10,7 @@ fenetre& programmeVisualisation::fenetre()
 {
     return d_fenetre;
 }
- programmeVisualisation::~programmeVisualisation()
+programmeVisualisation::~programmeVisualisation()
 {
 
 }
