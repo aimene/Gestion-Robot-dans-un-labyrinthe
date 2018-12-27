@@ -192,7 +192,6 @@ void terrain::sauveTerrain()
 
 void terrain::dessineTerrain(fenetre& fenetre)
 {
-    fenetre.open();
     for(int i = 0 ; i< hauteur(); ++i)
     {
         for(int j = 0 ; j< largeur(); ++j)
@@ -200,7 +199,6 @@ void terrain::dessineTerrain(fenetre& fenetre)
             d_terrain[i][j]->dessineCases(fenetre, *this, i, j);
         }
     }
-    fenetre.repeteJusquaBouton();
 }
 
 

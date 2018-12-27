@@ -2,7 +2,7 @@
 #define VISUALISATIONROBOTDANSTERRAINDEPLACEMENTS_H
 
 #include "robotAvance.h"
-class visualisationRobotDansTerrainDeplacements
+class visualisationRobotDansTerrainAlgoMainDroite
 {
 class terrain;
 public:

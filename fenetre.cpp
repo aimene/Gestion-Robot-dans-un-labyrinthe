@@ -9,81 +9,126 @@ namespace affichage
 {
 
 fenetre::fenetre(int width, int height, int borderx, int bordery):
-               d_width{width}, d_height{height},
-               d_borderx{borderx}, d_bordery{bordery},
-               d_winopen{false},
-               d_vpx{0,d_width,d_borderx,d_width-d_borderx},
-               d_vpy{0,d_height,d_height-d_bordery,d_bordery}
+    d_width{width}, d_height{height},
+    d_borderx{borderx}, d_bordery{bordery},
+    d_winopen{false},
+    d_vpx{0,d_width,d_borderx,d_width-d_borderx},
+    d_vpy{0,d_height,d_height-d_bordery,d_bordery}
 { }
 
 fenetre::~fenetre()
 {
-  if (d_winopen) { close(); }
+    if (d_winopen)
+    {
+        close();
+    }
 }
 
 void fenetre::open()
 {
-  if (!d_winopen)
-  {
-    opengraphsize(d_width+2*d_borderx,d_height+2*d_bordery);
-    d_winopen = true;
-  }
+    if (!d_winopen)
+    {
+        opengraphsize(d_width+2*d_borderx,d_height+2*d_bordery);
+        d_winopen = true;
+    }
 }
 
 void fenetre::close()
 {
-  if (d_winopen)
-  {
-    closegraph();
-    d_winopen = false;
-  }
+    if (d_winopen)
+    {
+        closegraph();
+        d_winopen = false;
+    }
 }
 
 void fenetre::repeteJusquaBouton()
 {
-  //getch();
-  waituntilbuttonpressed();
+    //getch();
+    waituntilbuttonpressed();
 }
 
 void fenetre::flush()
 {
-  kbhit();
+    kbhit();
 }
 
 void fenetre::clear()
 {
-  cleardevice();
+    cleardevice();
 }
 
 int fenetre::pixelx(double x) const
 {
-  return static_cast<int>(d_vpx.destFromSrc(std::round(x)));
+    return static_cast<int>(d_vpx.destFromSrc(std::round(x)));
 }
 
 int fenetre::pixely(double y) const
 {
-  return static_cast<int>(d_vpy.destFromSrc(std::round(y)));
+    return static_cast<int>(d_vpy.destFromSrc(std::round(y)));
 }
 
 void fenetre::wait(int ms)
 {
-  delay(ms);
+    delay(ms);
 }
 void fenetre::dessineSegment(const point& point1,const point& point2) const
 {
-    line(point1.x(),point1.y(),point2.x(),point2.y());
+    line(pixelx(point1.x()),pixely(point1.y()),pixelx(point2.x()),pixely(point2.y()));
 }
 void fenetre::dessineRectangle(const point& basGauche, const point& hautDroit) const
 {
-    rectangle(basGauche.x(),basGauche.y(),hautDroit.x(),hautDroit.y());
+    rectangle(pixelx(basGauche.x()),pixely(basGauche.y()),pixelx(hautDroit.x()),pixely(hautDroit.y()));
 }
+
 void fenetre::dessineRectanglePlein(const point& basGauche, const point& hautGauche,const point& hautDroit,const point& basDroit) const
 {
-    int tab []= {basGauche.x(),basGauche.y(),hautGauche.x(),hautGauche.y(),
-                 hautDroit.x(),hautDroit.y(),basDroit.x(),basDroit.y(),
-                 basGauche.x(),basGauche.y()};
+    int tab []= {pixelx(basGauche.x()),pixely(basGauche.y()),pixelx(hautGauche.x()),pixely(hautGauche.y()),
+                 pixelx(hautDroit.x()),pixely(hautDroit.y()),pixelx(basDroit.x()),pixely(basDroit.y()),
+                 pixelx(basGauche.x()),pixely(basGauche.y())
+                };
 
     fillpoly(5,tab);
+}
+
+void fenetre::dessinePolyPleinEst(const point& basGauche, const point& hautGauche,const point& hautDroit,const point& basDroit, const point& direction)
+{
+    int tab []= {pixelx(basGauche.x()),pixely(basGauche.y()),pixelx(hautGauche.x()),pixely(hautGauche.y()),
+                 pixelx(hautDroit.x()),pixely(hautDroit.y()),pixelx(direction.x()),pixely(direction.y()),pixelx(basDroit.x()),pixely(basDroit.y()),
+                 pixelx(basGauche.x()),pixely(basGauche.y())
+                };
+    fillpoly(6,tab);
+
+}
+
+
+void fenetre::dessinePolyPleinNord(const point& basGauche, const point& hautGauche,const point& hautDroit,const point& basDroit, const point& direction)
+{
+    int tab []= {pixelx(basGauche.x()),pixely(basGauche.y()),pixelx(hautGauche.x()),pixely(hautGauche.y()),
+                 pixelx(direction.x()),pixely(direction.y()),pixelx(hautDroit.x()),pixely(hautDroit.y()),pixelx(basDroit.x()),pixely(basDroit.y()),
+                 pixelx(basGauche.x()),pixely(basGauche.y())
+                };
+    fillpoly(6,tab);
+
+}
+
+void fenetre::dessinePolyPleinOuest(const point& basGauche, const point& hautGauche,const point& hautDroit,const point& basDroit, const point& direction)
+{
+    int tab []= {pixelx(basGauche.x()),pixely(basGauche.y()),pixelx(direction.x()),pixely(direction.y()),pixelx(hautGauche.x()),pixely(hautGauche.y()),
+                 pixelx(hautDroit.x()),pixely(hautDroit.y()),pixelx(basDroit.x()),pixely(basDroit.y()),
+                 pixelx(basGauche.x()),pixely(basGauche.y())
+                };
+    fillpoly(6,tab);
+
+}
+void fenetre::dessinePolyPleinSud(const point& basGauche, const point& hautGauche,const point& hautDroit,const point& basDroit, const point& direction)
+{
+    int tab []= {pixelx(basGauche.x()),pixely(basGauche.y()),pixelx(hautGauche.x()),pixely(hautGauche.y()),
+                 pixelx(hautDroit.x()),pixely(hautDroit.y()),pixelx(basDroit.x()),pixely(basDroit.y()),
+                 pixelx(direction.x()),pixely(direction.y()),pixelx(basGauche.x()),pixely(basGauche.y())
+                };
+    fillpoly(6,tab);
+
 }
 
 
