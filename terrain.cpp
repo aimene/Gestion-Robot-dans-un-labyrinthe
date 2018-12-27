@@ -204,8 +204,8 @@ void terrain::sauveTerrain()
     cout<<"La taille de la case en pixel "<<endl;
     cin>>d_tailleCase;
     fichier<<d_tailleCase<<endl;
-    char valeur ;
-    for(int i=0;i<d_hauteur;++i)
+    char valeur;
+    for(int i = 0;i<d_hauteur;++i)
     {
         for(int j = 0 ; j<d_largeur;++j)
         {

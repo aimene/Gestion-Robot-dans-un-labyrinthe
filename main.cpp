@@ -9,8 +9,10 @@ using namespace affichage;
 int main()
 {
 
-  //fenetre fenetre {900,900};
-   terrain t;
+  /*fenetre fenetre {900,900};
+  terrain terrain{"terrain0.txt"};
+  terrain.dessineTerrain(fenetre);*/
+  terrain t;
    t.sauveTerrain();
     return 0;
 }
