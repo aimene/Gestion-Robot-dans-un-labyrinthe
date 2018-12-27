@@ -22,5 +22,6 @@ int main()
     std::cout<<" maine dessine robot "<< std::endl;
     robot.dessineRobot(terrain,fenetre);
     fenetre.repeteJusquaBouton();
+
     return 0;
 }
