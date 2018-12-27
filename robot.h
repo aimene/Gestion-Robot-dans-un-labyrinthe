@@ -8,15 +8,20 @@
 #include"caseMur.h"
 #include"caseBordureMur.h"
 using namespace geom;
+using namespace affichage ;
+
+
+namespace affichage { class fenetre; }
 namespace gestionRobotTerrain {
 class robot
 {
 public:
     robot();
-    ~robot();
+   // ~robot();
     robot(const point& position,int direction);
-    point positionRobot() const;
-    void dessineRobot(const terrain& terrain);
+    const point& positionRobot() const;
+    point pointDirection(int unQuartCase );
+    void dessineRobot(terrain& terrain , fenetre& fenetre);
     bool detecteObstacleDevant(const terrain& terrain);
     bool avanceCase(const terrain& terrain);
     void changePositionRobot(const point& position);
