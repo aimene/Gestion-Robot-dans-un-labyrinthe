@@ -6,7 +6,8 @@ using namespace std;
 namespace gestionRobotTerrain
 {
 
-
+terrain::terrain():d_type{},d_position{},d_largeur{},d_hauteur{},d_tailleCase{},d_terrain{},d_nomFichier{}
+{}
 terrain::terrain(const string& nomFichier):d_nomFichier{nomFichier}
 {
     litTerrain();
@@ -104,7 +105,8 @@ bool terrain::litTerrain()
 
         if(type()==typeCaseMur)
             litCaseMur(fichier,ligne);
-        else{
+        else
+        {
             if(type()==typeCaseBordureMur)
                 litCaseBordureMur(fichier,ligne);
         }
@@ -175,19 +177,44 @@ void terrain::litCaseBordureMur(std::ifstream& fichier,string& ligne)
             else
                 caseborduremur->changeMurBas(false);
 
-          /*  std::cout<<" caseborduremur->estMurHaut() " <<caseborduremur->estMurHaut()<< std::endl;
-            std::cout<<" caseborduremur->estMurHaut() " <<caseborduremur->estMurHaut()<< std::endl;
-            std::cout<<" caseborduremur->estMurGauche()" <<caseborduremur->estMurGauche()<< std::endl;
-            std::cout<<"caseborduremur->estMurDroit()" <<caseborduremur->estMurDroit()<< std::endl;*/
+
             colonne.push_back(caseborduremur);
         }
-    d_terrain.push_back(colonne);
+        d_terrain.push_back(colonne);
     }
 }
 
 void terrain::sauveTerrain()
 {
-
+    cout<<"Le nom du fichier"<<endl;
+    cin>>d_nomFichier;
+    ofstream fichier(string{repertoire+d_nomFichier+".txt"});
+    cout<<"La position "<<endl;
+    cin>>d_position;
+    fichier<<d_position<<endl;
+    cout<<"La hauteur "<<endl;
+    cin>>d_hauteur;
+    fichier<<d_hauteur<<endl;
+    cout<<"La largeur "<<endl;
+    cin>>d_largeur;
+    fichier<<d_largeur<<endl;
+    cout<<"Le type "<<endl;
+    cin>>d_type;
+    fichier<<d_type<<endl;
+    cout<<"La taille de la case en pixel "<<endl;
+    cin>>d_tailleCase;
+    fichier<<d_tailleCase<<endl;
+    char valeur;
+    for(int i = 0;i<d_hauteur;++i)
+    {
+        for(int j = 0 ; j<d_largeur;++j)
+        {
+            cin>>valeur;
+            fichier<<valeur;
+        }
+        fichier<<endl;
+    }
+    fichier.close();
 }
 
 void terrain::dessineTerrain(fenetre& fenetre)

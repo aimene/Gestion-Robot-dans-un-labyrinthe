@@ -21,10 +21,9 @@ public:
     point hautGauche(const terrain& terrain,int ligne, int colonne) const ;
     point hautDroit(const terrain& terrain,int ligne, int colonne) const ;
 
-
 };
 
 
 }
 
-#endif //CASE_H
+#endif //CASES_H
