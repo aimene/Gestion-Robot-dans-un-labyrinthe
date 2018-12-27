@@ -20,6 +20,7 @@ public:
     point basDroit(const terrain& terrain,int ligne, int colonne) const ;
     point hautGauche(const terrain& terrain,int ligne, int colonne) const ;
     point hautDroit(const terrain& terrain,int ligne, int colonne) const ;
+
 };
 
 
