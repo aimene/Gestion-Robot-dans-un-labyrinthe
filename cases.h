@@ -21,11 +21,7 @@ public:
     point hautGauche(const terrain& terrain,int ligne, int colonne) const ;
     point hautDroit(const terrain& terrain,int ligne, int colonne) const ;
 
-   /* virtual bool estMur() const ;
-    virtual bool estMurGauche() const;
-    virtual bool estMurDroit() const;
-    virtual bool estMurBas()const;
-    virtual bool estMurHaut()const;*/
+
 };
 
 
