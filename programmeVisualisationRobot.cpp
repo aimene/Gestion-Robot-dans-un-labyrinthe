@@ -14,21 +14,37 @@ programmeVisualisationRobot::~programmeVisualisationRobot()
 }
 void programmeVisualisationRobot::runAlgoMainDroite( terrain& terrain, robot& robot)
 {
-    while(robot.positionRobot().x()<terrain.position().x())
+    while(estDansTerrain(terrain, robot))
     {
         while(!robot.detecteObstacleDevant(terrain))
         {
             robot.tourneDroite();
         }
         robot.tourneGauche();
-        robot.avanceCase(terrain);
+        if(!robot.detecteObstacleDevant(terrain))
+        {
+
+        }
+        else
+        {
+
+        }
+
         robot.dessineRobot(terrain,fenetre() );
+
     }
 }
 
 void programmeVisualisationRobot::runAlgoPledje( terrain& terrain, robot& robot)
 {
 
+}
+
+bool programmeVisualisationRobot::estDansTerrain(terrain& terrain,robot& robot)
+{
+    return robot.positionRobot().x()<terrain.position().x()+terrain.tailleCase()*terrain.largeur() &&
+           robot.positionRobot().y()<terrain.position().y()+terrain.tailleCase()*terrain.hauteur()
+           ;
 }
 
 

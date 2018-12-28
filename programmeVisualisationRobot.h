@@ -20,7 +20,7 @@ public:
     virtual void runAlgoMainDroite( terrain& terrain, robot& robot)override;
     virtual void runAlgoPledje( terrain& terrain, robot& robot)override;
 
-
+    bool estDansTerrain(terrain& terrain, robot& robot);
 
 
 
