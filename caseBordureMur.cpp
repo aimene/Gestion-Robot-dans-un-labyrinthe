@@ -34,7 +34,7 @@ namespace gestionRobotTerrain
     }
     void caseBordureMur::changeMurDroit(bool change)
     {
-        d_haut = change;
+        d_droit = change;
     }
     void caseBordureMur::changeMurGauche(bool change)
     {
