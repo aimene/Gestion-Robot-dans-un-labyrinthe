@@ -14,13 +14,13 @@ class programmeVisualisation
 {
 public:
 
-    programmeVisualisation(fenetre fenetre);
+    programmeVisualisation(fenetre& fenetre);
     virtual ~programmeVisualisation();
 
 
     fenetre& fenetre() ;
     virtual void runAlgoMainDroite( terrain& terrain, robot& robot)=0;
-    virtual void runAlgoPledje( terrain& terrain, robot& robot)=0;
+    virtual void runAlgoPledge( terrain& terrain, robot& robot,affichage::fenetre& fenetre)=0;
 
 
 

@@ -2,7 +2,7 @@
 namespace gestionRobotTerrain
 {
 
-programmeVisualisation::programmeVisualisation(affichage::fenetre fenetre) :d_fenetre{fenetre}
+programmeVisualisation::programmeVisualisation(affichage::fenetre& fenetre) :d_fenetre{fenetre}
 {
 
 }
