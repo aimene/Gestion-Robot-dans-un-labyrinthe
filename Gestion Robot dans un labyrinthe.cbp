@@ -51,6 +51,10 @@
 		<Unit filename="programmeVisualisation.h" />
 		<Unit filename="programmeVisualisationRobot.cpp" />
 		<Unit filename="programmeVisualisationRobot.h" />
+		<Unit filename="programmeVisualisationRobotAvance.cpp" />
+		<Unit filename="programmeVisualisationRobotAvance.h" />
+		<Unit filename="programmeVisualisationRobotAvanceDeplacements.cpp" />
+		<Unit filename="programmeVisualisationRobotAvanceDeplacements.h" />
 		<Unit filename="programmeVisualisationRobotDeplacements.cpp" />
 		<Unit filename="programmeVisualisationRobotDeplacements.h" />
 		<Unit filename="robot.cpp" />
