@@ -79,7 +79,6 @@ void programmeVisualisationRobot::runAlgoMainDroite( terrain& terrain, robot& ro
 
             }
 
-
         }
         majFenetre( terrain,robot);
     }
@@ -93,51 +92,108 @@ void programmeVisualisationRobot::runAlgoPledge(terrain& terrain, robot& robot)
     int compteurTourne=0;
     while(estDansTerrain(terrain,robot))
     {
+        fenetre().clear();
+        terrain.dessineTerrain(fenetre());
+        robot.dessineRobot(terrain,fenetre());
+        fenetre().wait(500);
         if(compteurTourne==0)
         {
-            std::cout<<"compteurTourne==0"<<std::endl;
 
             while(!robot.detecteObstacleDevant(terrain))
             {
-                std::cout<<"moi detecteObstacle";
                 robot.avanceCase(terrain);
+                fenetre().clear();
+                terrain.dessineTerrain(fenetre());
+                robot.dessineRobot(terrain,fenetre());
+                fenetre().wait(500);
             }
             robot.tourneDroite();
+            fenetre().clear();
+            terrain.dessineTerrain(fenetre());
+            robot.dessineRobot(terrain,fenetre());
+            fenetre().wait(500);
             compteurTourne+=tourneDroite;
             if(!robot.detecteObstacleDevant(terrain))
+            {
                 robot.avanceCase(terrain);
+                fenetre().clear();
+                terrain.dessineTerrain(fenetre());
+                robot.dessineRobot(terrain,fenetre());
+                fenetre().wait(500);
+            }
         }
         if(compteurTourne!=0)
         {
             robot.tourneGauche();
+            fenetre().clear();
+            terrain.dessineTerrain(fenetre());
+            robot.dessineRobot(terrain,fenetre());
+            fenetre().wait(500);
             compteurTourne+=tourneGauche;
             if(!robot.detecteObstacleDevant(terrain))
             {
                 robot.avanceCase(terrain);
+                fenetre().clear();
+                terrain.dessineTerrain(fenetre());
+                robot.dessineRobot(terrain,fenetre());
+
+                fenetre().wait(500);
                 robot.tourneGauche();
+                fenetre().clear();
+                terrain.dessineTerrain(fenetre());
+                robot.dessineRobot(terrain,fenetre());
+                fenetre().wait(500);
                 compteurTourne+=tourneGauche;
-            }
-            if(robot.detecteObstacleDevant(terrain)) //else
-            {
-                robot.tourneDroite();
-                compteurTourne+=tourneDroite;
-                robot.avanceCase(terrain);
             }
             if(robot.detecteObstacleDevant(terrain))
             {
                 robot.tourneDroite();
+                fenetre().clear();
+                terrain.dessineTerrain(fenetre());
+                robot.dessineRobot(terrain,fenetre());
+                fenetre().wait(500);
                 compteurTourne+=tourneDroite;
+
+            }
+            if(robot.detecteObstacleDevant(terrain))
+            {
+                robot.tourneDroite();
+                fenetre().clear();
+                terrain.dessineTerrain(fenetre());
+                robot.dessineRobot(terrain,fenetre());
+                fenetre().wait(500);
+                compteurTourne+=tourneDroite;
+                fenetre().clear();
+                terrain.dessineTerrain(fenetre());
                 robot.avanceCase(terrain);
+                robot.dessineRobot(terrain,fenetre());
+                fenetre().wait(500);
+                fenetre().clear();
+                terrain.dessineTerrain(fenetre());
+                robot.dessineRobot(terrain,fenetre());
+                fenetre().wait(500);
             }
             else
             {
                 robot.avanceCase(terrain);
+                fenetre().clear();
+                terrain.dessineTerrain(fenetre());
+                robot.dessineRobot(terrain,fenetre());
+                fenetre().wait(500);
             }
         }
-
+        std::cout<<compteurTourne<<std::endl;
+        fenetre().clear();
+        terrain.dessineTerrain(fenetre());
+        robot.dessineRobot(terrain,fenetre());
+        fenetre().wait(500);
+        std::cout<<"terrain"<<terrain.position()<<std::endl;
+        std::cout<<robot.positionRobot()<<std::endl;
     }
+    terrain.dessineTerrain(fenetre());
+    robot.dessineRobot(terrain,fenetre());
+    fenetre().repeteJusquaBouton();
 }
-
 
 
 

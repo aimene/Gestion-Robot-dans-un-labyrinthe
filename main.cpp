@@ -21,14 +21,12 @@ int main()
     robot robot{positionRobot,1};
     terrain terrain{"terrainBordureMur1.txt"};
 
-
-
-
     fenetre.open();
+
         terrain.dessineTerrain(fenetre);
         programmeVisualisationRobot prog {fenetre};
         prog.runAlgoMainDroite(terrain , robot);
-    fenetre.repeteJusquaBouton();
 
+    fenetre.repeteJusquaBouton();
     return 0;
 }
