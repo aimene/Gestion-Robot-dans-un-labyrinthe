@@ -74,16 +74,16 @@ bool robot::detecteObstacleDevant(const terrain& terrain)
         switch(d_direction)
         {
         case EST :
-            return dynamic_cast<caseMur*>(d_terrain[ligne][colonne+1])->estMur();
+            return static_cast<caseMur*>(d_terrain[ligne][colonne+1])->estMur();
             break;
         case OUEST:
-            return dynamic_cast<caseMur*>(d_terrain[ligne][colonne-1])->estMur();
+            return static_cast<caseMur*>(d_terrain[ligne][colonne-1])->estMur();
             break;
         case NORD :
-            return  dynamic_cast<caseMur*>(d_terrain[ligne+1][colonne])->estMur();
+            return  static_cast<caseMur*>(d_terrain[ligne+1][colonne])->estMur();
             break;
         case SUD :
-            return  dynamic_cast<caseMur*>(d_terrain[ligne-1][colonne])->estMur();
+            return  static_cast<caseMur*>(d_terrain[ligne-1][colonne])->estMur();
             break;
         }
 
@@ -95,16 +95,16 @@ bool robot::detecteObstacleDevant(const terrain& terrain)
             switch(d_direction)
             {
             case EST :
-                return dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne+1])->estMurDroit();
+                return static_cast<caseBordureMur*>(d_terrain[ligne][colonne+1])->estMurDroit();
                 break;
             case OUEST:
-                return dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne-1])->estMurGauche();
+                return static_cast<caseBordureMur*>(d_terrain[ligne][colonne-1])->estMurGauche();
                 break;
             case NORD :
-                return  dynamic_cast<caseBordureMur*>(d_terrain[ligne+1][colonne])->estMurHaut();
+                return  static_cast<caseBordureMur*>(d_terrain[ligne+1][colonne])->estMurHaut();
                 break;
             case SUD :
-                return  dynamic_cast<caseBordureMur*>(d_terrain[ligne-1][colonne])->estMurBas();
+                return  static_cast<caseBordureMur*>(d_terrain[ligne-1][colonne])->estMurBas();
                 break;
             }
         }

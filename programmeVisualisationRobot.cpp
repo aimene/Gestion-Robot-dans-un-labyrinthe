@@ -26,7 +26,6 @@ void programmeVisualisationRobot::runAlgoMainDroite( terrain& terrain, robot& ro
         robot.dessineRobot(terrain,fenetre());
     }
 }
-
 void programmeVisualisationRobot::runAlgoPledge(terrain& terrain, robot& robot,affichage::fenetre& fenetre)
 {
     const int tourneGauche = 1;
@@ -36,7 +35,6 @@ void programmeVisualisationRobot::runAlgoPledge(terrain& terrain, robot& robot,a
     //fausse condition //while(robot.positionRobot().x()<terrain.position().x()+terrain.largeur() && robot.positionRobot().y()<terrain.position().y()+terrain.hauteur() )
     while(x>0){ // test
             x--;
-
         if(compteurTourne==0)
         {
             std::cout<<"compteurTourne==0"<<std::endl;
@@ -48,8 +46,10 @@ void programmeVisualisationRobot::runAlgoPledge(terrain& terrain, robot& robot,a
             }
             robot.tourneDroite();
             compteurTourne+=tourneDroite;
+            if(!robot.detecteObstacleDevant(terrain))
+                robot.avanceCase(terrain);
         }
-        else
+        if(compteurTourne!=0)
         {
             robot.tourneGauche();
             compteurTourne+=tourneGauche;
@@ -57,11 +57,13 @@ void programmeVisualisationRobot::runAlgoPledge(terrain& terrain, robot& robot,a
             {
                 robot.avanceCase(terrain);
                 robot.tourneGauche();
+                compteurTourne+=tourneGauche;
             }
-            else
+            if(robot.detecteObstacleDevant(terrain)) //else
             {
                robot.tourneDroite();
                compteurTourne+=tourneDroite;
+               robot.avanceCase(terrain);
             }
             if(robot.detecteObstacleDevant(terrain))
             {

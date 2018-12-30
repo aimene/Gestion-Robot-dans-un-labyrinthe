@@ -23,7 +23,7 @@ int main()
 
     std::cout<<" main dessineTerrain = "<< std::endl;
     std::cout<<" maine dessine robot "<< std::endl;
-    //robot.dessineRobot(terrain,fenetre);
+    robot.dessineRobot(terrain,fenetre);
     programmeVisualisationRobot prog{fenetre};
     prog.runAlgoPledge(terrain,robot,fenetre);
     fenetre.repeteJusquaBouton();
