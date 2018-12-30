@@ -33,13 +33,13 @@
 	"caseMur.h"
 	"caseBordureMur.h"
 
-1545925625 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\fenetre.cpp
+1546199897 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\fenetre.cpp
 	<cmath>
 	"fenetre.h"
 	"graphics.h"
 	"fenetreAffichage.h"
 
-1545925625 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\fenetre.h
+1546199897 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\fenetre.h
 	<iostream>
 	"point.h"
 	"fenetreAffichage.h"
@@ -342,7 +342,10 @@
 	"robot.h"
 	"terrain.h"
 
-1545872355 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\robotavance.h
+1546182440 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\robotavance.h
+	"point.h"
+	"robot.h"
+	"terrain.h"
 
 1545853764 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\visualisationrobotdansterrain.cpp
 	"visualtionRobotDansTerrain.h"
@@ -367,10 +370,10 @@
 
 1545856358 Visualisation.h"
 
-1546038892 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\programmevisualisation.cpp
+1546199897 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\programmevisualisation.cpp
 	"programmeVisualisation.h"
 
-1546182645 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\programmevisualisation.h
+1546199897 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\programmevisualisation.h
 	"fenetre.h"
 	"terrain.h"
 	"robot.h"
@@ -388,11 +391,11 @@
 	"robot.h"
 	"programmeVisualisation.h"
 
-1546196091 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\programmevisualisationrobot.cpp
+1546200268 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\programmevisualisationrobot.cpp
 	"programmeVisualisationRobot.h"
 	"windows.h"
 
-1546182655 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\programmevisualisationrobot.h
+1546199897 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\programmevisualisationrobot.h
 	"programmeVisualisation.h"
 
 1545924032 source:c:\users\bilell\documents\gestion-robot-dans-un-labyrinthe\programmevisualisationrobot.cpp
@@ -417,5 +420,15 @@
 	"point.h"
 
 1546193447 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\programmevisualisationrobotdeplacements.h
+	"programmeVisualisationRobot.h"
+
+1546199897 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\programmevisualisationrobotdeplacements.cpp
+	"programmeVisualisationRobotDeplacements.h"
+	"windows.h"
+	"robotAvance.h"
+	"robot.h"
+	"point.h"
+
+1546199897 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\programmevisualisationrobotdeplacements.h
 	"programmeVisualisationRobot.h"
 
