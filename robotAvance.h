@@ -5,7 +5,8 @@
 #include "terrain.h"
 
 using namespace geom;
-namespace gestionRobotTerrain {
+namespace gestionRobotTerrain
+{
 class robotAvance : public robot
 {
 public:

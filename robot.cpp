@@ -74,16 +74,16 @@ bool robot::detecteObstacleDevant(const terrain& terrain)
         switch(d_direction)
         {
         case EST :
-            return dynamic_cast<caseMur*>(d_terrain[ligne][colonne+1])->estMur();
+            return (dynamic_cast<caseMur*>(d_terrain[ligne][colonne+1]))->estMur();
             break;
         case OUEST:
-            return dynamic_cast<caseMur*>(d_terrain[ligne][colonne-1])->estMur();
+            return (dynamic_cast<caseMur*>(d_terrain[ligne][colonne-1]))->estMur();
             break;
         case NORD :
-            return  dynamic_cast<caseMur*>(d_terrain[ligne+1][colonne])->estMur();
+            return  (dynamic_cast<caseMur*>(d_terrain[ligne+1][colonne]))->estMur();
             break;
         case SUD :
-            return  dynamic_cast<caseMur*>(d_terrain[ligne-1][colonne])->estMur();
+            return  (dynamic_cast<caseMur*>(d_terrain[ligne-1][colonne]))->estMur();
             break;
         }
 
@@ -95,16 +95,18 @@ bool robot::detecteObstacleDevant(const terrain& terrain)
             switch(d_direction)
             {
             case EST :
-                return dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne])->estMurDroit();
+                return (dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne]))->estMurDroit();
                 break;
             case OUEST:
-                return dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne])->estMurGauche();
+                return (dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne]))->estMurGauche();
                 break;
             case NORD :
-                return  dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne])->estMurHaut();
+                return  (dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne]))->estMurHaut();
                 break;
             case SUD :
-                return  dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne])->estMurBas();
+                           std::cout<<" dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne]))->estMurBas() avant robot = "<< (dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne]))->estMurBas()<< std::endl;
+
+                return  (dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne]))->estMurBas();
                 break;
             }
         }
@@ -120,7 +122,7 @@ bool robot::avanceCase(const terrain& terrain)
             return false ;
         else
         {
-            d_position.move(d_position.x()+terrain.tailleCase(),d_position.y());
+            d_position.move (terrain.tailleCase(),0);
             return true;
         }
         break;
@@ -129,7 +131,7 @@ bool robot::avanceCase(const terrain& terrain)
             return false ;
         else
         {
-            d_position.move(d_position.x()-terrain.tailleCase(),d_position.y());
+            d_position.move(-terrain.tailleCase(),0);
             return true;
         }
         break;
@@ -138,7 +140,7 @@ bool robot::avanceCase(const terrain& terrain)
             return false ;
         else
         {
-            d_position.move(d_position.x(),d_position.y()+terrain.tailleCase());
+            d_position.move(0,+terrain.tailleCase());
             return true;
         }
         break;
@@ -147,7 +149,7 @@ bool robot::avanceCase(const terrain& terrain)
             return false ;
         else
         {
-            d_position.move(d_position.x(),d_position.y()-terrain.tailleCase());
+            d_position.move(0,-terrain.tailleCase());
             return true;
         }
         break;

@@ -14,19 +14,29 @@ programmeVisualisationRobot::~programmeVisualisationRobot()
 }
 void programmeVisualisationRobot::runAlgoMainDroite( terrain& terrain, robot& robot)
 {
+
+    while(!robot.detecteObstacleDevant(terrain))
+    {
+        robot.tourneDroite();
+    }
+    robot.tourneGauche();
+
     while(estDansTerrain(terrain, robot))
     {
-        while(!robot.detecteObstacleDevant(terrain))
+        robot.tourneDroite();
+        if(robot.detecteObstacleDevant(terrain))
         {
-            robot.tourneDroite();
-        }
-        robot.tourneGauche();
-        if(!robot.detecteObstacleDevant(terrain))
-        {
-
+            robot.tourneGauche();
+            if(robot.detecteObstacleDevant(terrain))
+                robot.tourneGauche();
+            else
+                robot.avanceCase(terrain);
         }
         else
         {
+            robot.avanceCase(terrain);
+            if(robot.detecteObstacleDevant(terrain))
+                robot.tourneGauche();
 
         }
 
