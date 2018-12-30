@@ -54,8 +54,7 @@ void programmeVisualisationRobotAvance::runAlgoMainDroite( terrain& terrain, rob
     {
         if(robot.estObstacleSurSaDroite(terrain))
         {
-            robot.tourneGauche();
-              majFenetre( terrain,robot);
+
             if(robot.detecteObstacleDevant(terrain))
             {
                  robot.tourneGauche();
@@ -67,8 +66,11 @@ void programmeVisualisationRobotAvance::runAlgoMainDroite( terrain& terrain, rob
 
             }
         }else{
+            robot.tourneDroite();
+             majFenetre( terrain,robot);
             robot.avanceCase(terrain);
-            if(robot.estObstacleSurSaDroite(terrain))
+             majFenetre( terrain,robot);
+            if(robot.detecteObstacleDevant(terrain))
             {
                 robot.tourneGauche();
                     majFenetre( terrain,robot);

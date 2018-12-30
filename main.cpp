@@ -8,6 +8,8 @@
 #include"robotAvance.h"
 #include"point.h"
 #include"programmeVisualisationRobotDeplacements.h"
+#include"programmeVisualisationRobotAvanceDeplacements.h"
+
 #include "programmeVisualisationRobot.h"
 #include "programmeVisualisationRobotAvance.h"
 
@@ -27,7 +29,7 @@ int main()
     fenetre.open();
 
         terrain.dessineTerrain(fenetre);
-         programmeVisualisationRobotAvance prog {fenetre};
+         programmeVisualisationRobotAvanceDeplacements prog {fenetre};
 
         prog.runAlgoMainDroite(terrain , robotAvance);
 
