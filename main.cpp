@@ -25,10 +25,12 @@ int main()
     fenetre.open();
         terrain.dessineTerrain(fenetre);
 
-        robot.dessineRobot(terrain,fenetre);
-        bool b = robot.avanceCase(terrain);
-        robot.dessineRobot(terrain,fenetre);
-        robot.dessineRobot(terrain,fenetre);
+        //robot.dessineRobot(terrain,fenetre);
+        //bool b = robot.avanceCase(terrain);
+        /*robot.dessineRobot(terrain,fenetre);
+        robot.dessineRobot(terrain,fenetre);*/
+        programmeVisualisationRobot prog{fenetre};
+        prog.runAlgoPledge(terrain,robot);
 
     fenetre.repeteJusquaBouton();
 

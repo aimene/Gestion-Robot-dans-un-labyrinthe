@@ -40,8 +40,7 @@ void programmeVisualisationRobot::runAlgoMainDroite( terrain& terrain, robot& ro
                 robot.tourneGauche();
 
         }
-
-        robot.dessineRobot(terrain,fenetre() );
+        robot.dessineRobot(terrain,fenetre());
     }
 }
 void programmeVisualisationRobot::runAlgoPledge(terrain& terrain, robot& robot)
@@ -49,46 +48,59 @@ void programmeVisualisationRobot::runAlgoPledge(terrain& terrain, robot& robot)
     const int tourneGauche = 1;
     const int tourneDroite = -1;
     int compteurTourne=0;
-    while(estDansTerrain(terrain,robot)){
+    while(estDansTerrain(terrain,robot))
+    {
+        robot.dessineRobot(terrain,fenetre());
         if(compteurTourne==0)
         {
-            std::cout<<"compteurTourne==0"<<std::endl;
 
             while(!robot.detecteObstacleDevant(terrain))
             {
-                std::cout<<"moi detecteObstacle";
                 robot.avanceCase(terrain);
+                robot.dessineRobot(terrain,fenetre());
             }
             robot.tourneDroite();
+            robot.dessineRobot(terrain,fenetre());
             compteurTourne+=tourneDroite;
             if(!robot.detecteObstacleDevant(terrain))
+            {
                 robot.avanceCase(terrain);
+                robot.dessineRobot(terrain,fenetre());
+            }
         }
         if(compteurTourne!=0)
         {
             robot.tourneGauche();
+            robot.dessineRobot(terrain,fenetre());
             compteurTourne+=tourneGauche;
             if(!robot.detecteObstacleDevant(terrain))
             {
                 robot.avanceCase(terrain);
+                robot.dessineRobot(terrain,fenetre());
                 robot.tourneGauche();
+                robot.dessineRobot(terrain,fenetre());
                 compteurTourne+=tourneGauche;
             }
             if(robot.detecteObstacleDevant(terrain)) //else
             {
-               robot.tourneDroite();
-               compteurTourne+=tourneDroite;
-               robot.avanceCase(terrain);
+                robot.tourneDroite();
+                robot.dessineRobot(terrain,fenetre());
+                compteurTourne+=tourneDroite;
+                robot.avanceCase(terrain);
+                robot.dessineRobot(terrain,fenetre());
             }
             if(robot.detecteObstacleDevant(terrain))
             {
                 robot.tourneDroite();
+                robot.dessineRobot(terrain,fenetre());
                 compteurTourne+=tourneDroite;
                 robot.avanceCase(terrain);
+                robot.dessineRobot(terrain,fenetre());
             }
             else
             {
                 robot.avanceCase(terrain);
+                robot.dessineRobot(terrain,fenetre());
             }
         }
     }
