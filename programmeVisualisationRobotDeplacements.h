@@ -18,7 +18,7 @@ public:
     programmeVisualisationRobotDepacements(affichage::fenetre& fenetre);
     virtual ~programmeVisualisationRobotDepacements();
 
-    virtual void majFenetre(terrain& terrain, robot& robot) override;
+    virtual void majFenetre(terrain& terrain, robot& robot) ;
 
    // virtual void runAlgoMainDroite( terrain& terrain, robot& robot)override;
    // virtual void runAlgoPledge( terrain& terrain, robot& robot)override;
