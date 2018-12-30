@@ -18,9 +18,9 @@ public:
 
 
     virtual void runAlgoMainDroite( terrain& terrain, robot& robot)override;
-    virtual void runAlgoPledge( terrain& terrain, robot& robot,affichage::fenetre& fenetre)override;
+    virtual void runAlgoPledge( terrain& terrain, robot& robot)override;
 
-
+    bool estDansTerrain(terrain& terrain, robot& robot);
 
 
 

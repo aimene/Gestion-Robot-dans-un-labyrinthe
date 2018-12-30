@@ -164,21 +164,20 @@ void terrain::litCaseBordureMur(std::ifstream& fichier,string& ligne)
             else
                 caseborduremur->changeMurGauche(false);
 
-            if(ligne[j+1]==isMur)
-                caseborduremur->changeMurHaut(true);
-            else
-                caseborduremur->changeMurHaut(false);
-
             if(ligne[j+2]==isMur)
                 caseborduremur->changeMurDroit(true);
             else
                 caseborduremur->changeMurDroit(false);
 
-            if(ligne[j+3]==isMur)
+            if(ligne[j+1]==isMur)
                 caseborduremur->changeMurBas(true);
             else
                 caseborduremur->changeMurBas(false);
 
+            if(ligne[j+3]==isMur)
+                caseborduremur->changeMurHaut(true);
+            else
+                caseborduremur->changeMurHaut(false);
 
             colonne.push_back(caseborduremur);
         }
@@ -196,9 +195,9 @@ void terrain::sauveTerrain()
     fichier<<largeur()<<endl;
     fichier<<type()<<endl;
     fichier<<tailleCase()<<endl;
-    for(int i = 0;i<hauteur();++i)
+    for(int i = 0; i<hauteur(); ++i)
     {
-        for(int j = 0 ; j<largeur();++j)
+        for(int j = 0 ; j<largeur(); ++j)
         {
             fichier<<terrainMatrice()[i][j];
         }

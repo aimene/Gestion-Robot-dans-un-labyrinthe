@@ -18,14 +18,18 @@ int main()
     point positionRobot{200,350};
     robot robot{positionRobot,1};
     terrain terrain{"terrainBordureMur1.txt"};
-    fenetre.open();
-    terrain.dessineTerrain(fenetre);
 
-    std::cout<<" main dessineTerrain = "<< std::endl;
-    std::cout<<" maine dessine robot "<< std::endl;
-    robot.dessineRobot(terrain,fenetre);
-    programmeVisualisationRobot prog{fenetre};
-    prog.runAlgoPledge(terrain,robot,fenetre);
+
+
+
+    fenetre.open();
+        terrain.dessineTerrain(fenetre);
+
+        robot.dessineRobot(terrain,fenetre);
+        bool b = robot.avanceCase(terrain);
+        robot.dessineRobot(terrain,fenetre);
+        robot.dessineRobot(terrain,fenetre);
+
     fenetre.repeteJusquaBouton();
 
     return 0;
