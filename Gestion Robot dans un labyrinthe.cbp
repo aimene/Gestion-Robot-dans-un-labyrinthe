@@ -45,25 +45,21 @@
 		<Unit filename="fenetreAffichage.h" />
 		<Unit filename="graphics.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="menu.cpp" />
 		<Unit filename="point.cpp" />
 		<Unit filename="point.h" />
 		<Unit filename="programmeVisualisation.cpp" />
 		<Unit filename="programmeVisualisation.h" />
 		<Unit filename="programmeVisualisationRobot.cpp" />
 		<Unit filename="programmeVisualisationRobot.h" />
-		<Unit filename="programmeVisualisationRobotAvance.cpp" />
-		<Unit filename="programmeVisualisationRobotAvance.h" />
-		<Unit filename="programmeVisualisationRobotAvanceDeplacements.cpp" />
-		<Unit filename="programmeVisualisationRobotAvanceDeplacements.h" />
 		<Unit filename="programmeVisualisationRobotDeplacements.cpp" />
 		<Unit filename="programmeVisualisationRobotDeplacements.h" />
 		<Unit filename="robot.cpp" />
 		<Unit filename="robot.h" />
+		<Unit filename="robotAvance.cpp" />
 		<Unit filename="robotAvance.h" />
 		<Unit filename="terrain.cpp" />
 		<Unit filename="terrain.h" />
-		<Unit filename="visualtionRobotDansTerrain.h" />
-		<Unit filename="visualtionRobotDansTerrainDeplacements.h" />
 		<Unit filename="winbgi.cpp" />
 		<Extensions>
 			<code_completion />

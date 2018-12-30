@@ -16,10 +16,10 @@ public:
     programmeVisualisationRobotAvance(affichage::fenetre& fenetre);
     virtual ~programmeVisualisationRobotAvance();
 
-    virtual void majFenetre(terrain& terrain, robotAvance& robot) override;
+    virtual void majFenetre(terrain& terrain, robot& robot) override;
 
-    virtual void runAlgoMainDroite( terrain& terrain, robotAvance& robot)override;
-    virtual void runAlgoPledge( terrain& terrain, robotAvance& robot)override;
+    virtual void runAlgoMainDroite( terrain& terrain, robot& robot)override;
+    virtual void runAlgoPledge( terrain& terrain, robot& robot)override;
 
 
 

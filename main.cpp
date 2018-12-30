@@ -4,6 +4,7 @@
 #include"cases.h"
 #include"fenetre.h"
 #include"robot.h"
+#include "robotAvance.h"
 #include"point.h"
 #include"programmeVisualisationRobotDeplacements.h"
 
@@ -26,7 +27,7 @@ int main()
         terrain.dessineTerrain(fenetre);
         programmeVisualisationRobot prog {fenetre};
 
-        prog.runAlgoPledge(terrain , robot);
+        prog.runAlgoPledge(terrain,robot);
 
 
     fenetre.repeteJusquaBouton();
