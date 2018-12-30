@@ -25,7 +25,7 @@ int main()
 
         terrain.dessineTerrain(fenetre);
         programmeVisualisationRobot prog {fenetre};
-        prog.runAlgoMainDroite(terrain , robot);
+        prog.runAlgoPledge(terrain , robot);
 
     fenetre.repeteJusquaBouton();
     return 0;
