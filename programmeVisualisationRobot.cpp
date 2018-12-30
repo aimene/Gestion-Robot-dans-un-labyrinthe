@@ -13,39 +13,43 @@ programmeVisualisationRobot::~programmeVisualisationRobot()
 {
 
 }
-void programmeVisualisationRobot::runAlgoMainDroite( terrain& terrain, robot& robot)
+
+void programmeVisualisationRobot::majFenetre(terrain& terrain, robot& robot)
 {
+
     fenetre().clear();
     terrain.dessineTerrain(fenetre());
     robot.dessineRobot(terrain,fenetre() );
+    fenetre().wait(500);
+
+}
+
+void programmeVisualisationRobot::runAlgoMainDroite( terrain& terrain, robot& robot)
+{
+    terrain.dessineTerrain(fenetre());
+ majFenetre( terrain,robot);
     while(!robot.detecteObstacleDevant(terrain))
     {
         robot.tourneDroite();
-        fenetre().clear();
-        terrain.dessineTerrain(fenetre());
-        robot.dessineRobot(terrain,fenetre() );
+        majFenetre( terrain,robot);
+
     }
     robot.tourneGauche();
-    fenetre().clear();
-    terrain.dessineTerrain(fenetre());
-    robot.dessineRobot(terrain,fenetre() );
+    majFenetre( terrain,robot);
+
     while(estDansTerrain(terrain, robot))
     {
 
         robot.tourneDroite();
-        fenetre().clear();
-        terrain.dessineTerrain(fenetre());
-        robot.dessineRobot(terrain,fenetre() );
-        fenetre().wait(500);
+
+        majFenetre( terrain,robot);
 
         if(robot.detecteObstacleDevant(terrain))
         {
-            fenetre().clear();
-            robot.tourneGauche();
-            terrain.dessineTerrain(fenetre());
-            robot.dessineRobot(terrain,fenetre() );
-            fenetre().wait(500);
 
+            robot.tourneGauche();
+
+            majFenetre( terrain,robot);
             if(robot.detecteObstacleDevant(terrain))
             {
 
@@ -60,34 +64,24 @@ void programmeVisualisationRobot::runAlgoMainDroite( terrain& terrain, robot& ro
         }
         else
         {
-            fenetre().clear();
-            terrain.dessineTerrain(fenetre());
-            robot.dessineRobot(terrain,fenetre() );
-            robot.avanceCase(terrain);
-        fenetre().wait(500);
+            majFenetre( terrain,robot);
 
-            fenetre().clear();
-            terrain.dessineTerrain(fenetre());
-            robot.dessineRobot(terrain,fenetre() );
-             fenetre().wait(500);
+            robot.avanceCase(terrain);
+
+
+            majFenetre( terrain,robot);
 
             if(robot.detecteObstacleDevant(terrain))
             {
 
                 robot.tourneGauche();
-                fenetre().clear();
-                terrain.dessineTerrain(fenetre());
-                robot.dessineRobot(terrain,fenetre() );
-            fenetre().wait(500);
+                majFenetre( terrain,robot);
 
             }
 
 
         }
-        fenetre().clear();
-        terrain.dessineTerrain(fenetre());
-        robot.dessineRobot(terrain,fenetre() );
-        fenetre().wait(500);
+        majFenetre( terrain,robot);
     }
     terrain.dessineTerrain(fenetre());
     fenetre().repeteJusquaBouton();
@@ -145,12 +139,7 @@ void programmeVisualisationRobot::runAlgoPledge(terrain& terrain, robot& robot)
 }
 
 
-bool programmeVisualisationRobot::estDansTerrain(terrain& terrain,robot& robot)
-{
-    return robot.positionRobot().x()<terrain.position().x()+terrain.tailleCase()*terrain.largeur() &&
-           robot.positionRobot().y()<terrain.position().y()+terrain.tailleCase()*terrain.hauteur()
-           ;
-}
+
 
 
 }

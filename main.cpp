@@ -5,6 +5,8 @@
 #include"fenetre.h"
 #include"robot.h"
 #include"point.h"
+#include"programmeVisualisationRobotDeplacements.h"
+
 #include "programmeVisualisationRobot.h"
 #include "programmeVisualisation.h"
 using namespace std;
@@ -24,13 +26,8 @@ int main()
 
     fenetre.open();
         terrain.dessineTerrain(fenetre);
-
-
-
-
         programmeVisualisationRobot prog {fenetre};
-
-       prog.runAlgoMainDroite(terrain , robot);
+        prog.runAlgoMainDroite(terrain , robot);
     fenetre.repeteJusquaBouton();
 
     return 0;

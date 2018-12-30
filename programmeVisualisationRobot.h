@@ -16,11 +16,11 @@ public:
     programmeVisualisationRobot(affichage::fenetre& fenetre);
     virtual ~programmeVisualisationRobot();
 
+    virtual void majFenetre(terrain& terrain, robot& robot) override;
 
-    virtual void runAlgoMainDroite( terrain& terrain, robot& robot)override;
+   virtual void runAlgoMainDroite( terrain& terrain, robot& robot)override;
     virtual void runAlgoPledge( terrain& terrain, robot& robot)override;
 
-    bool estDansTerrain(terrain& terrain, robot& robot);
 
 
 
