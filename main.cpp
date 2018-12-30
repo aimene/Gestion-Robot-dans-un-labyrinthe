@@ -19,20 +19,19 @@ int main()
     robot robot{positionRobot,1};
     terrain terrain{"terrainBordureMur1.txt"};
 
-
-
-
     fenetre.open();
-        terrain.dessineTerrain(fenetre);
+    terrain.dessineTerrain(fenetre);
 
-        //robot.dessineRobot(terrain,fenetre);
-        //bool b = robot.avanceCase(terrain);
-        /*robot.dessineRobot(terrain,fenetre);
-        robot.dessineRobot(terrain,fenetre);*/
-        programmeVisualisationRobot prog{fenetre};
-        prog.runAlgoPledge(terrain,robot);
+    //robot.dessineRobot(terrain,fenetre);
+    //bool b = robot.avanceCase(terrain);
+    /*robot.dessineRobot(terrain,fenetre);
+    robot.dessineRobot(terrain,fenetre);*/
+    programmeVisualisationRobot prog{fenetre};
+    prog.runAlgoPledge(terrain,robot);
+    //prog.runAlgoMainDroite(terrain,robot);
 
+
+    //prog.runAlgoMainDroite(terrain , robot);
     fenetre.repeteJusquaBouton();
-
     return 0;
 }
