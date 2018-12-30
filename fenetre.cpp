@@ -81,7 +81,7 @@ void fenetre::dessineRectangle(const point& basGauche, const point& hautDroit) c
     rectangle(pixelx(basGauche.x()),pixely(basGauche.y()),pixelx(hautDroit.x()),pixely(hautDroit.y()));
 }
 
-void fenetre::dessineRectanglePlein(const point& basGauche, const point& hautGauche,const point& hautDroit,const point& basDroit) const
+void fenetre::dessineRectanglePlein(const point& basGauche, const point& hautGauche,const point& hautDroit,const point& basDroit ,int color ) const
 {
     int tab []= {pixelx(basGauche.x()),pixely(basGauche.y()),pixelx(hautGauche.x()),pixely(hautGauche.y()),
                  pixelx(hautDroit.x()),pixely(hautDroit.y()),pixelx(basDroit.x()),pixely(basDroit.y()),

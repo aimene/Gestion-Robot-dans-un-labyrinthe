@@ -10,6 +10,14 @@ fenetre& programmeVisualisation::fenetre()
 {
     return d_fenetre;
 }
+
+
+bool programmeVisualisation::estDansTerrain(terrain& terrain,robot& robot)
+{
+    return robot.positionRobot().x()<terrain.position().x()+terrain.tailleCase()*terrain.largeur() &&
+           robot.positionRobot().y()<terrain.position().y()+terrain.tailleCase()*terrain.hauteur()
+           ;
+}
 programmeVisualisation::~programmeVisualisation()
 {
 

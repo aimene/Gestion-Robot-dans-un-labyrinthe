@@ -47,6 +47,12 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="point.cpp" />
 		<Unit filename="point.h" />
+		<Unit filename="programmeVisualisation.cpp" />
+		<Unit filename="programmeVisualisation.h" />
+		<Unit filename="programmeVisualisationRobot.cpp" />
+		<Unit filename="programmeVisualisationRobot.h" />
+		<Unit filename="programmeVisualisationRobotDeplacements.cpp" />
+		<Unit filename="programmeVisualisationRobotDeplacements.h" />
 		<Unit filename="robot.cpp" />
 		<Unit filename="robot.h" />
 		<Unit filename="robotAvance.h" />

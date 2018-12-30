@@ -5,6 +5,8 @@
 #include"fenetre.h"
 #include"robot.h"
 #include"point.h"
+#include"programmeVisualisationRobotDeplacements.h"
+
 #include "programmeVisualisationRobot.h"
 #include "programmeVisualisation.h"
 using namespace std;
@@ -20,18 +22,11 @@ int main()
     terrain terrain{"terrainBordureMur1.txt"};
 
     fenetre.open();
-    terrain.dessineTerrain(fenetre);
 
-    //robot.dessineRobot(terrain,fenetre);
-    //bool b = robot.avanceCase(terrain);
-    /*robot.dessineRobot(terrain,fenetre);
-    robot.dessineRobot(terrain,fenetre);*/
-    programmeVisualisationRobot prog{fenetre};
-    prog.runAlgoPledge(terrain,robot);
-    //prog.runAlgoMainDroite(terrain,robot);
+        terrain.dessineTerrain(fenetre);
+        programmeVisualisationRobot prog {fenetre};
+        prog.runAlgoMainDroite(terrain , robot);
 
-
-    //prog.runAlgoMainDroite(terrain , robot);
     fenetre.repeteJusquaBouton();
     return 0;
 }
