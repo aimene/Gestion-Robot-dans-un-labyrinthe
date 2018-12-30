@@ -74,6 +74,7 @@ bool robot::detecteObstacleDevant(const terrain& terrain)
         switch(d_direction)
         {
         case EST :
+
             return (dynamic_cast<caseMur*>(d_terrain[ligne][colonne+1]))->estMur();
             break;
         case OUEST:
@@ -95,6 +96,7 @@ bool robot::detecteObstacleDevant(const terrain& terrain)
             switch(d_direction)
             {
             case EST :
+
                 return (dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne]))->estMurDroit();
                 break;
             case OUEST:
@@ -104,8 +106,6 @@ bool robot::detecteObstacleDevant(const terrain& terrain)
                 return  (dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne]))->estMurHaut();
                 break;
             case SUD :
-                           std::cout<<" dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne]))->estMurBas() avant robot = "<< (dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne]))->estMurBas()<< std::endl;
-
                 return  (dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne]))->estMurBas();
                 break;
             }
