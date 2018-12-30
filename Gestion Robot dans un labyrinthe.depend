@@ -90,7 +90,7 @@
 1545658479 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\fenetreaffichage.cpp
 	"fenetreAffichage.h"
 
-1546200745 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\main.cpp
+1546202052 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\main.cpp
 	<iostream>
 	"terrain.h"
 	<cstdlib>
@@ -100,6 +100,7 @@
 	"robotAvance.h"
 	"point.h"
 	"programmeVisualisationRobotDeplacements.h"
+	"programmeVisualisationRobotAvanceDeplacements.h"
 	"programmeVisualisationRobot.h"
 	"programmeVisualisationRobotAvance.h"
 	"programmeVisualisation.h"
@@ -426,7 +427,7 @@
 	"robot.h"
 	"point.h"
 
-1546200015 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\programmevisualisationrobotdeplacements.cpp
+1546200757 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\programmevisualisationrobotdeplacements.cpp
 	"programmeVisualisationRobotDeplacements.h"
 	"windows.h"
 	"robotAvance.h"
@@ -456,12 +457,17 @@
 
 1546197323 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\programmevisualisationrobotavancedeplacements.cpp
 
-1546200985 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\programmevisualisationrobotavance.cpp
+1546201590 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\programmevisualisationrobotavance.cpp
 	"programmeVisualisationRobotAvance.h"
 	"windows.h"
 
 1546201032 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\programmevisualisationrobotavance.h
 	"programmeVisualisation.h"
 
+<<<<<<< HEAD
 1546201032 ff900791859b818420fb95c68acf1a1accf26
+=======
+1546202120 c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\programmevisualisationrobotavancedeplacements.h
+	"programmeVisualisationRobotAvance.h"
+>>>>>>> 937b93762a04b3e24e053e7abbe145df8a4cfc0d
 
