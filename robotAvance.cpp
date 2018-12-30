@@ -8,6 +8,7 @@ namespace gestionRobotTerrain
     robotAvance::robotAvance(const point& position, int direction):robot(position,direction)
     {}
 
+    robotAvance::~robotAvance(){}
  bool  robotAvance::estObstacleSurSaGauche(const terrain& terrain)
     {
         tourneGauche();

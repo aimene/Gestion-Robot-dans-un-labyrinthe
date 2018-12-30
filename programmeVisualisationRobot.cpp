@@ -4,7 +4,7 @@ namespace gestionRobotTerrain
 {
 
 programmeVisualisationRobot::programmeVisualisationRobot(affichage::fenetre& fenetre)
-    :programmeVisualisation{fenetre}
+    :d_fenetre{fenetre}
 {
 
 }
@@ -13,7 +13,18 @@ programmeVisualisationRobot::~programmeVisualisationRobot()
 {
 
 }
+fenetre& programmeVisualisationRobot::fenetre()
+{
+    return d_fenetre;
+}
 
+
+bool programmeVisualisationRobot::estDansTerrain(terrain& terrain,robot& robot)
+{
+    return robot.positionRobot().x()<terrain.position().x()+terrain.tailleCase()*terrain.largeur() &&
+           robot.positionRobot().y()<terrain.position().y()+terrain.tailleCase()*terrain.hauteur()
+           ;
+}
 void programmeVisualisationRobot::majFenetre(terrain& terrain, robot& robot)
 {
 
@@ -24,7 +35,7 @@ void programmeVisualisationRobot::majFenetre(terrain& terrain, robot& robot)
 
 }
 
-void programmeVisualisationRobot::runAlgoMainDroite( terrain& terrain, robot& robot)
+void programmeVisualisationRobot::runAlgoMainDroite( terrain& terrain,robot& robot)
 {
     terrain.dessineTerrain(fenetre());
  majFenetre( terrain,robot);
