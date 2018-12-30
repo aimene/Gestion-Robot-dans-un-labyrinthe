@@ -48,17 +48,17 @@ void robot::tourneGauche()
 {
     switch(d_direction)
     {
-    case EST :
+    case OUEST :
+        d_direction = SUD;
+        break;
+    case EST:
         d_direction = NORD;
         break;
-    case OUEST:
-        d_direction = SUD;
+    case  SUD:
+        d_direction = EST;
         break;
     case NORD :
         d_direction = OUEST;
-        break;
-    case SUD :
-        d_direction = EST;
         break;
     }
 }
@@ -97,16 +97,20 @@ bool robot::detecteObstacleDevant(const terrain& terrain)
             {
             case EST :
 
-                return (dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne]))->estMurDroit();
+                return (dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne]))->estMurDroit()
+                     ||(dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne+1]))->estMurGauche();
                 break;
             case OUEST:
-                return (dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne]))->estMurGauche();
+                return (dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne]))->estMurGauche()
+                    ||(dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne-1]))->estMurDroit();
                 break;
             case NORD :
-                return  (dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne]))->estMurHaut();
+                return  (dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne]))->estMurBas()
+                    || (dynamic_cast<caseBordureMur*>(d_terrain[ligne+1][colonne]))->estMurHaut();
                 break;
             case SUD :
-                return  (dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne]))->estMurBas();
+                return  (dynamic_cast<caseBordureMur*>(d_terrain[ligne][colonne]))->estMurHaut()
+                    || (dynamic_cast<caseBordureMur*>(d_terrain[ligne-1][colonne]))->estMurBas();;
                 break;
             }
         }

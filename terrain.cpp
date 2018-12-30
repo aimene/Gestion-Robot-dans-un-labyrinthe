@@ -164,15 +164,17 @@ void terrain::litCaseBordureMur(std::ifstream& fichier,string& ligne)
             else
                 caseborduremur->changeMurGauche(false);
 
+            if(ligne[j+1]==isMur)
+                caseborduremur->changeMurBas(true);
+            else
+                caseborduremur->changeMurBas(false);
+
             if(ligne[j+2]==isMur)
                 caseborduremur->changeMurDroit(true);
             else
                 caseborduremur->changeMurDroit(false);
 
-            if(ligne[j+1]==isMur)
-                caseborduremur->changeMurBas(true);
-            else
-                caseborduremur->changeMurBas(false);
+
 
             if(ligne[j+3]==isMur)
                 caseborduremur->changeMurHaut(true);
