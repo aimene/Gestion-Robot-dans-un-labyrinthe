@@ -26,6 +26,7 @@ public:
 
 public :
 
+
     affichage::fenetre d_fenetre ;
 
 

@@ -5,7 +5,7 @@
 #include"fenetre.h"
 
 #include"robot.h"
-#include"robotAvance.h"
+
 #include"point.h"
 #include"programmeVisualisationRobotDeplacements.h"
 #include"programmeVisualisationRobotAvanceDeplacements.h"
@@ -31,7 +31,7 @@ int main()
         terrain.dessineTerrain(fenetre);
          programmeVisualisationRobotAvance prog {fenetre};
 
-        prog.runAlgoMainDroite(terrain , robotAvance);
+        prog.runAlgoPledge(terrain , robotAvance);
 
 
     fenetre.repeteJusquaBouton();
