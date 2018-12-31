@@ -440,7 +440,11 @@
 1546199897 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\programmevisualisationrobotdeplacements.h
 	"programmeVisualisationRobot.h"
 
-1546197323 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\programmevisualisationrobotavancedeplacements.cpp
+1546202093 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\programmevisualisationrobotavancedeplacements.cpp
+	"programmeVisualisationRobotAvanceDeplacements.h"
+	"windows.h"
+	"robotAvance.h"
+	"point.h"
 
 1546201590 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\programmevisualisationrobotavance.cpp
 	"programmeVisualisationRobotAvance.h"

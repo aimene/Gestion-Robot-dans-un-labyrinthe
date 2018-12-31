@@ -29,7 +29,7 @@ int main()
     fenetre.open();
 
         terrain.dessineTerrain(fenetre);
-         programmeVisualisationRobotAvanceDeplacements prog {fenetre};
+         programmeVisualisationRobotAvance prog {fenetre};
 
         prog.runAlgoMainDroite(terrain , robotAvance);
 
