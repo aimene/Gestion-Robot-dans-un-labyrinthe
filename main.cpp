@@ -34,6 +34,7 @@ int main()
         prog.runAlgoPledge(terrain ,robotAvance);
 
 
+
     fenetre.repeteJusquaBouton();
     return 0;
 }
