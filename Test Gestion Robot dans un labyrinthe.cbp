@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Test Gestion Robot dans un labyrinthe" />
+		<Option pch_mode="2" />
+		<Option compiler="copy_of_gnu_gcc_compiler_81" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Test Gestion Robot dans un labyrinthe" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gnu_gcc_compiler_8" />
+				<Option projectCompilerOptionsRelation="-1" />
+				<Option projectLinkerOptionsRelation="-1" />
+				<Option projectIncludeDirsRelation="-1" />
+				<Option projectLibDirsRelation="-1" />
+				<Compiler>
+					<Add option="-std=c++11" />
+				</Compiler>
+				<MakeCommands>
+					<Build command="" />
+					<CompileFile command="" />
+					<Clean command="" />
+					<DistClean command="" />
+					<AskRebuildNeeded command="" />
+					<SilentBuild command=" &gt; $(CMD_NULL)" />
+				</MakeCommands>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Test Gestion Robot dans un labyrinthe" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="copy_of_gnu_gcc_compiler_81" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="caseBordureMur.cpp" />
+		<Unit filename="caseBordureMur.h" />
+		<Unit filename="caseMur.cpp" />
+		<Unit filename="caseMur.h" />
+		<Unit filename="cases.cpp" />
+		<Unit filename="cases.h" />
+		<Unit filename="doctest.h" />
+		<Unit filename="fenetre.cpp" />
+		<Unit filename="fenetre.h" />
+		<Unit filename="fenetreAffichage.cpp" />
+		<Unit filename="fenetreAffichage.h" />
+		<Unit filename="graphics.h" />
+		<Unit filename="point.cpp" />
+		<Unit filename="point.h" />
+		<Unit filename="robot.cpp" />
+		<Unit filename="robot.h" />
+		<Unit filename="terrain.cpp" />
+		<Unit filename="terrain.h" />
+		<Unit filename="testRobot.cpp" />
+		<Unit filename="testTerrain.cpp" />
+		<Unit filename="testmain.cpp" />
+		<Unit filename="winbgi.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
