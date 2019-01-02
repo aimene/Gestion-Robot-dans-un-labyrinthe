@@ -22,9 +22,9 @@ terrain::terrain(const point & position, const string& nomFichier,int type,int t
 
 terrain::~terrain()
 {
-    for(int i =0; i< hauteur(); ++i)
+    for(int i = 0; i< hauteur(); ++i)
     {
-        for(int j =0; j< largeur(); ++i)
+        for(int j = 0; j< largeur(); ++j)
         {
             delete terrainMatriceModifieCase()[i][j];
         }
