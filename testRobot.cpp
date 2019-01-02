@@ -2,8 +2,9 @@
 #include "robot.h"
 #include "terrain.h"
 #include "point.h"
+#include "fenetre.h"
 
-
+using affichage::fenetre;
 using gestionRobotTerrain::robot;
 using gestionRobotTerrain::terrain;
 
@@ -38,17 +39,30 @@ TEST_CASE("Les manipulations sur le robot sont correctes")
     }
     SUBCASE("Le robot detecte un obstacle est correct")
     {
+        fenetre fenetre{900,500};
         robot = {positionRobotObstacleDevant,direction};
+        fenetre.open();
         terrain terrain{"terrainBordureMur1.txt"};
+        terrain.dessineTerrain(fenetre);
+        robot.dessineRobot(terrain,fenetre);
         bool detecteObstacle = robot.detecteObstacleDevant(terrain);
+        std::cout<<detecteObstacle;
+        REQUIRE_EQ(detecteObstacle,true );
+        fenetre.repeteJusquaBouton();
 
-        REQUIRE(detecteObstacle == true );
     }
     SUBCASE("Le robot avance est correct")
     {
+        fenetre fenetre{900,500};
+        fenetre.open();
         terrain terrain{"terrainBordureMur1.txt"};
+        terrain.dessineTerrain(fenetre);
+        robot.dessineRobot(terrain,fenetre);
         std::cout<<robot.positionRobot();
+        fenetre.wait(1000);
         bool avance = robot.avanceCase(terrain);
+        robot.dessineRobot(terrain,fenetre);
         REQUIRE(avance == true );
+        fenetre.repeteJusquaBouton();
     }
 }
