@@ -1,8 +1,9 @@
 #ifndef PROGRAMMEVISUALISATIONROBOT_H
 #define PROGRAMMEVISUALISATIONROBOT_H
 
-#include"programmeVisualisation.h"
+#include "terrain.h"
 #include"fenetre.h"
+#include "robot.h"
 using namespace affichage ;
 
 
@@ -25,7 +26,7 @@ public:
 
 
 
-public :
+private :
 
     affichage::fenetre d_fenetre ;
 

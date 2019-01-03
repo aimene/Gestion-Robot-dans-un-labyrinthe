@@ -95,7 +95,7 @@ bool terrain::litTerrain()
     {
 
         fichier>> d_position;
-        std::cout<<"d_position = " <<d_position<< std::endl;
+        //std::cout<<"d_position = " <<d_position<< std::endl;
         fichier>> d_hauteur;
 
         fichier>>d_largeur;
@@ -123,7 +123,7 @@ bool terrain::litTerrain()
 
 void terrain::litCaseMur(std::ifstream& fichier,string& ligne)
 {
-    std::cout<<" litCaseMur " << std::endl;
+    //std::cout<<" litCaseMur " << std::endl;
     for(int i=0 ; i< hauteur(); ++i )
     {
         fichier>>ligne;
@@ -155,7 +155,7 @@ void terrain::litCaseBordureMur(std::ifstream& fichier,string& ligne)
         fichier>>ligne;
         vector<cases*> colonne ;
         colonne.reserve(largeur());
-        std::cout<<" largeur() " << largeur()<<std::endl;
+        //std::cout<<" largeur() " << largeur()<<std::endl;
 
         for(int j=0; j <largeur()*4; j+=4)
         {
