@@ -86,7 +86,7 @@ void terrain::changeNomFichier(const string& nomFichier)
 
 bool terrain::litTerrain()
 {
-    std::cout<<"avvant de lire le ficher " << std::endl;
+   // std::cout<<"avvant de lire le ficher " << std::endl;
     ifstream fichier(string{repertoire+d_nomFichier}); // on ouvre le fichier en lecture
 
     if(fichier)  // si l'ouverture a réussi
@@ -111,7 +111,7 @@ bool terrain::litTerrain()
         }
 
 
-        std::cout<<"fin = " << std::endl;
+       // std::cout<<"fin = " << std::endl;
         fichier.close();
         return true ;
     }

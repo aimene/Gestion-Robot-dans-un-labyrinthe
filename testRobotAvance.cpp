@@ -19,6 +19,7 @@ TEST_CASE("Les manipulations sur un robot avance sont correctes")
     int nouvelleDirection;
     robotAvance robot{positionRobot,direction};
     fenetre fenetre{900,500};
+        robot = {positionRobot,direction};
     SUBCASE("Le robot avance detecte un obstacle a sa droite est correct")
     {
         fenetre.open();

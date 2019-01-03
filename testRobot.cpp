@@ -18,6 +18,8 @@ TEST_CASE("Les manipulations sur le robot sont correctes")
     int point = 100;
     int nouvelleDirection;
     robot robot{positionRobot,direction};
+    fenetre fenetre{900,500};
+
     SUBCASE("Le robot position du robot change est correct")
     {
 
@@ -39,21 +41,22 @@ TEST_CASE("Les manipulations sur le robot sont correctes")
     }
     SUBCASE("Le robot detecte un obstacle est correct")
     {
-        fenetre fenetre{900,500};
-        robot = {positionRobotObstacleDevant,direction};
+
         fenetre.open();
         terrain terrain{"terrainBordureMur1.txt"};
         terrain.dessineTerrain(fenetre);
+        robot = {positionRobotObstacleDevant,direction};
         robot.dessineRobot(terrain,fenetre);
         bool detecteObstacle = robot.detecteObstacleDevant(terrain);
         std::cout<<detecteObstacle;
-        REQUIRE_EQ(detecteObstacle,true );
+        REQUIRE_EQ(robot.detecteObstacleDevant(terrain),true );
         fenetre.repeteJusquaBouton();
+
+
 
     }
     SUBCASE("Le robot avance est correct")
     {
-        fenetre fenetre{900,500};
         fenetre.open();
         terrain terrain{"terrainBordureMur1.txt"};
         terrain.dessineTerrain(fenetre);
@@ -62,7 +65,7 @@ TEST_CASE("Les manipulations sur le robot sont correctes")
         fenetre.wait(1000);
         bool avance = robot.avanceCase(terrain);
         robot.dessineRobot(terrain,fenetre);
-        REQUIRE(avance == true );
+        REQUIRE(robot.avanceCase(terrain)==true );
         fenetre.repeteJusquaBouton();
     }
 }

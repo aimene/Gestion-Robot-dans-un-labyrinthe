@@ -25,10 +25,10 @@ public:
     fenetre& fenetre() ;
     bool estDansTerrain(terrain& terrain, robotAvance& robot);
 
-    virtual void majFenetre(terrain& terrain, robotAvance& robot)=0;
+   /* virtual void majFenetre(terrain& terrain, robotAvance& robot)=0;
 
     virtual void runAlgoMainDroite( terrain& terrain, robotAvance& robot)=0;
-    virtual void runAlgoPledge( terrain& terrain, robotAvance& robot)=0;
+    virtual void runAlgoPledge( terrain& terrain, robotAvance& robot)=0;*/
 
 
 
