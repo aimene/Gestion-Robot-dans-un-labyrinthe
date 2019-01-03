@@ -1,8 +1,10 @@
 #ifndef PROGRAMMEVISUALISATIONROBOT_H
 #define PROGRAMMEVISUALISATIONROBOT_H
 
-#include"programmeVisualisation.h"
 #include"fenetre.h"
+#include "terrain.h"
+#include "robot.h"
+
 using namespace affichage ;
 
 

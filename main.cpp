@@ -13,7 +13,6 @@
 #include "programmeVisualisationRobot.h"
 #include "programmeVisualisationRobotAvance.h"
 
-#include "programmeVisualisation.h"
 using namespace std;
 using namespace gestionRobotTerrain;
 using namespace affichage;
@@ -29,9 +28,9 @@ int main()
     fenetre.open();
 
         terrain.dessineTerrain(fenetre);
-         programmeVisualisationRobotAvance prog {fenetre};
+         programmeVisualisationRobotAvanceDeplacements prog {fenetre};
 
-        prog.runAlgoPledge(terrain , robotAvance);
+        prog.runAlgoMainDroite(terrain , robotAvance);
 
 
     fenetre.repeteJusquaBouton();

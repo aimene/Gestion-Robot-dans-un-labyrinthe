@@ -1,8 +1,9 @@
 #ifndef PROGRAMMEVISUALISATIONROBOTAVANCE_H
 #define PROGRAMMEVISUALISATIONROBOTAVANCE_H
 
-#include"programmeVisualisation.h"
-
+#include "terrain.h"
+#include "fenetre.h"
+#include "robotAvance.h"
 using namespace affichage ;
 
 
