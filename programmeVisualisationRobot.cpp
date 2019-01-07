@@ -22,8 +22,7 @@ fenetre& programmeVisualisationRobot::fenetre()
 bool programmeVisualisationRobot::estDansTerrain(terrain& terrain,robot& robot)
 {
     return robot.positionRobot().x()<terrain.position().x()+terrain.tailleCase()*terrain.largeur() &&
-           robot.positionRobot().y()<terrain.position().y()+terrain.tailleCase()*terrain.hauteur()
-           ;
+           robot.positionRobot().y()<terrain.position().y()+terrain.tailleCase()*terrain.hauteur();
 }
 void programmeVisualisationRobot::majFenetre(terrain& terrain, robot& robot)
 {
@@ -38,33 +37,16 @@ void programmeVisualisationRobot::majFenetre(terrain& terrain, robot& robot)
 void programmeVisualisationRobot::runAlgoMainDroite( terrain& terrain,robot& robot)
 {
     terrain.dessineTerrain(fenetre());
- majFenetre( terrain,robot);
-    while(!robot.detecteObstacleDevant(terrain))
-    {
-        robot.tourneDroite();
-        majFenetre( terrain,robot);
-
-    }
-    robot.tourneGauche();
     majFenetre( terrain,robot);
-
-    while(estDansTerrain(terrain, robot))
+    while(estDansTerrain(terrain,robot))
     {
-
-        robot.tourneDroite();
-
-        majFenetre( terrain,robot);
-
         if(robot.detecteObstacleDevant(terrain))
         {
-
-            robot.tourneGauche();
-
+            robot.tourneDroite();
             majFenetre( terrain,robot);
             if(robot.detecteObstacleDevant(terrain))
             {
-
-                robot.tourneGauche();
+                robot.tourneDroite();
 
             }
             else
@@ -72,26 +54,28 @@ void programmeVisualisationRobot::runAlgoMainDroite( terrain& terrain,robot& rob
                 robot.avanceCase(terrain);
 
             }
+
         }
         else
         {
+            robot.tourneDroite();
             majFenetre( terrain,robot);
-
-            robot.avanceCase(terrain);
-
-
-            majFenetre( terrain,robot);
-
             if(robot.detecteObstacleDevant(terrain))
             {
-
                 robot.tourneGauche();
-                majFenetre( terrain,robot);
+                 majFenetre( terrain,robot);
+
+                robot.avanceCase(terrain);
+
+            }
+            else
+            {
+                robot.avanceCase(terrain);
 
             }
 
         }
-        majFenetre( terrain,robot);
+           majFenetre( terrain,robot);
     }
     terrain.dessineTerrain(fenetre());
     fenetre().repeteJusquaBouton();
@@ -147,22 +131,22 @@ void programmeVisualisationRobot::runAlgoPledge(terrain& terrain, robot& robot)
                 majFenetre( terrain,robot);
                 compteurTourne+=tourneDroite;
                 robot.avanceCase(terrain);
-                 majFenetre( terrain,robot);
+                majFenetre( terrain,robot);
             }
             else
             {
                 robot.avanceCase(terrain);
-                 majFenetre( terrain,robot);
+                majFenetre( terrain,robot);
             }
         }
         std::cout<<compteurTourne<<std::endl;
-         majFenetre( terrain,robot);
+        majFenetre( terrain,robot);
         std::cout<<"terrain"<<terrain.position()<<std::endl;
         std::cout<<robot.positionRobot()<<std::endl;
     }
     terrain.dessineTerrain(fenetre());
     robot.dessineRobot(terrain,fenetre());
-    fenetre().repeteJusquaBouton();
+    fenetre().close();
 }
 
 

@@ -2,9 +2,9 @@
 #define PROGRAMMEVISUALISATIONROBOTAVANCE_H
 
 #include "terrain.h"
-#include "fenetre.h"
 #include "robotAvance.h"
-using namespace affichage ;
+#include"fenetre.h"
+using namespace affichage;
 
 
 namespace affichage { class fenetre; }
@@ -12,7 +12,6 @@ namespace gestionRobotTerrain
 {
 class programmeVisualisationRobotAvance
 {
-
 public:
 
     programmeVisualisationRobotAvance(affichage::fenetre& fenetre);
@@ -25,7 +24,7 @@ public:
     virtual void runAlgoMainDroite( terrain& terrain, robotAvance& robot);
     virtual void runAlgoPledge( terrain& terrain, robotAvance& robot);
 
-public :
+private :
 
 
     affichage::fenetre d_fenetre ;
