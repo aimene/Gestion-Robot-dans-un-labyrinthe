@@ -20,17 +20,16 @@ using affichage::fenetre;
 using namespace geom;
 int main()
 {
-    fenetre fenetre {900,500};
-    point positionRobotAvance{200,350};
-    robotAvance robotAvance{positionRobotAvance,1};
-    terrain terrain{"terrainBordureMur1.txt"};
+    fenetre fenetre {800,800};
+    point positionRobot{50,550};
+    robot robot{positionRobot,1};
+    terrain terrain{"terrainCaseMur1final.txt"};
 
     fenetre.open();
 
         terrain.dessineTerrain(fenetre);
-         programmeVisualisationRobotAvance prog {fenetre};
-
-        prog.runAlgoPledge(terrain ,robotAvance);
+        programmeVisualisationRobot prog {fenetre};
+        prog.runAlgoPledge(terrain,robot);
 
 
     fenetre.repeteJusquaBouton();

@@ -6,8 +6,6 @@
 #include "caseBordureMur.h"
 #include <vector>
 
-
-
 using gestionRobotTerrain::terrain;
 using geom::point;
 using gestionRobotTerrain::cases;

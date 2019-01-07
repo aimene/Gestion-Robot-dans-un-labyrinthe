@@ -32,7 +32,7 @@ void programmeVisualisationRobotAvance::majFenetre(terrain& terrain, robotAvance
     fenetre().clear();
     terrain.dessineTerrain(fenetre());
     robot.dessineRobot(terrain,fenetre() );
-    fenetre().wait(500);
+    fenetre().wait(10);
 
 }
 
@@ -94,7 +94,6 @@ void programmeVisualisationRobotAvance::runAlgoMainDroite( terrain& terrain, rob
 
 
 void programmeVisualisationRobotAvance::runAlgoPledge(terrain& terrain, robotAvance& robotAvance)
-
 {
     const int tourneGauche = 1;
     const int tourneDroite = -1;
@@ -109,7 +108,6 @@ void programmeVisualisationRobotAvance::runAlgoPledge(terrain& terrain, robotAva
             {
                 robotAvance.avanceCase(terrain);
                 majFenetre( terrain,robotAvance);
-
             }
             robotAvance.tourneDroite();
             majFenetre( terrain,robotAvance);
@@ -118,6 +116,24 @@ void programmeVisualisationRobotAvance::runAlgoPledge(terrain& terrain, robotAva
             {
                 robotAvance.avanceCase(terrain);
                 majFenetre( terrain,robotAvance);
+            }
+            else
+            {
+                robotAvance.tourneGauche();
+                majFenetre( terrain,robotAvance);
+                compteurTourne+=tourneGauche;
+                if(!robotAvance.detecteObstacleDevant(terrain))
+                {
+                    robotAvance.avanceCase(terrain);
+                    majFenetre( terrain,robotAvance);
+                }
+                else
+                {
+                   robotAvance.tourneGauche();
+                   majFenetre( terrain,robotAvance);
+                   compteurTourne+=tourneGauche;
+                }
+
             }
         }
         if(compteurTourne!=0)
@@ -137,7 +153,7 @@ void programmeVisualisationRobotAvance::runAlgoPledge(terrain& terrain, robotAva
                         if(!robotAvance.detecteObstacleDevant(terrain))
                         {
                             robotAvance.avanceCase(terrain);
-                        majFenetre(terrain,robotAvance);
+                            majFenetre(terrain,robotAvance);
                         }
                         else
                         {
@@ -147,6 +163,18 @@ void programmeVisualisationRobotAvance::runAlgoPledge(terrain& terrain, robotAva
                         }
 
                     }
+                }
+                else
+                {
+                    robotAvance.tourneGauche();
+                    majFenetre(terrain,robotAvance);
+                    compteurTourne+=tourneGauche;
+                    if(!robotAvance.detecteObstacleDevant(terrain))
+                    {
+                        robotAvance.avanceCase(terrain);
+                        majFenetre(terrain,robotAvance);
+                    }
+
                 }
             }
             if(robotAvance.estObstacleSurSaGauche(terrain))

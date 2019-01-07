@@ -6,7 +6,7 @@
 #include <string.h>
 using gestionRobotTerrain::terrain;
 
-TEST_CASE("Les manipulations sur le terrai sont correctes")
+TEST_CASE("Les manipulations sur le terrain sont correctes")
 {
     SUBCASE("La lecture du terrain est correct")
     {

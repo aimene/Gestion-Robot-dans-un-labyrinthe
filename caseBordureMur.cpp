@@ -1,9 +1,5 @@
 #include "caseBordureMur.h"
 
-
-
-
-
 namespace gestionRobotTerrain
 {
     caseBordureMur::caseBordureMur(bool murGauche,bool murDroit,bool murBas,bool murHaut):d_gauche{murGauche},d_droit{murDroit},d_bas{murBas},d_haut{murHaut}
@@ -67,5 +63,4 @@ namespace gestionRobotTerrain
         }
 
     }
-
 }
