@@ -30,7 +30,9 @@ int main()
         terrain.dessineTerrain(fenetre);
          programmeVisualisationRobotAvanceDeplacements prog {fenetre};
 
+
         prog.runAlgoMainDroite(terrain , robotAvance);
+
 
 
     fenetre.repeteJusquaBouton();

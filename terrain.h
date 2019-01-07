@@ -49,7 +49,9 @@ public:
     void litCaseMur(std::ifstream& fichier,string& ligne);
     void litCaseBordureMur(std::ifstream& fichier,string& ligne);
 
-    void sauveTerrain() ;
+
+    void sauveTerrain();
+
 
 
     void dessineTerrain(fenetre& fenetre);

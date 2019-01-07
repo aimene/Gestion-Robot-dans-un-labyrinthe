@@ -22,9 +22,11 @@ terrain::terrain(const point & position, const string& nomFichier,int type,int t
 
 terrain::~terrain()
 {
-    for(int i =0; i< hauteur(); ++i)
+
+    for(int i = 0; i< hauteur(); ++i)
     {
-        for(int j =0; j< largeur(); ++i)
+        for(int j = 0; j< largeur(); ++j)
+
         {
             delete terrainMatriceModifieCase()[i][j];
         }
@@ -86,7 +88,7 @@ void terrain::changeNomFichier(const string& nomFichier)
 
 bool terrain::litTerrain()
 {
-    std::cout<<"avvant de lire le ficher " << std::endl;
+
     ifstream fichier(string{repertoire+d_nomFichier}); // on ouvre le fichier en lecture
 
     if(fichier)  // si l'ouverture a réussi
@@ -111,7 +113,7 @@ bool terrain::litTerrain()
         }
 
 
-        std::cout<<"fin = " << std::endl;
+
         fichier.close();
         return true ;
     }

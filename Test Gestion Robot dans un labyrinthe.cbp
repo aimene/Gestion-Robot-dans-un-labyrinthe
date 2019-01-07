@@ -43,12 +43,9 @@
 		<Unit filename="fenetreAffichage.cpp" />
 		<Unit filename="fenetreAffichage.h" />
 		<Unit filename="graphics.h" />
-		<Unit filename="main.cpp" />
 		<Unit filename="menu.cpp" />
 		<Unit filename="point.cpp" />
 		<Unit filename="point.h" />
-		<Unit filename="programmeVisualisation.cpp" />
-		<Unit filename="programmeVisualisation.h" />
 		<Unit filename="programmeVisualisationRobot.cpp" />
 		<Unit filename="programmeVisualisationRobot.h" />
 		<Unit filename="programmeVisualisationRobotAvance.cpp" />
@@ -63,6 +60,11 @@
 		<Unit filename="robotAvance.h" />
 		<Unit filename="terrain.cpp" />
 		<Unit filename="terrain.h" />
+		<Unit filename="testCaseBordureMur.cpp" />
+		<Unit filename="testRobot.cpp" />
+		<Unit filename="testRobotAvance.cpp" />
+		<Unit filename="testTerrain.cpp" />
+		<Unit filename="testmain.cpp" />
 		<Unit filename="winbgi.cpp" />
 		<Extensions>
 			<code_completion />
