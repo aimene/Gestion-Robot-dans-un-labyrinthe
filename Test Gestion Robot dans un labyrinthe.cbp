@@ -58,8 +58,6 @@
 		<Unit filename="graphics.h" />
 		<Unit filename="point.cpp" />
 		<Unit filename="point.h" />
-		<Unit filename="programmeVisualisation.cpp" />
-		<Unit filename="programmeVisualisation.h" />
 		<Unit filename="programmeVisualisationRobot.cpp" />
 		<Unit filename="programmeVisualisationRobot.h" />
 		<Unit filename="programmeVisualisationRobotAvance.cpp" />
@@ -71,7 +69,9 @@
 		<Unit filename="terrain.cpp" />
 		<Unit filename="terrain.h" />
 		<Unit filename="testCaseBordureMur.cpp" />
-		<Unit filename="testProgrammeVisualisation.cpp" />
+		<Unit filename="testCaseMur.cpp" />
+		<Unit filename="testProgrammeVisualisationRobot.cpp" />
+		<Unit filename="testProgrammeVisualisationRobotAvance.cpp" />
 		<Unit filename="testRobot.cpp" />
 		<Unit filename="testRobotAvance.cpp" />
 		<Unit filename="testTerrain.cpp" />

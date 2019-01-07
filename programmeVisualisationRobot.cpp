@@ -38,32 +38,15 @@ void programmeVisualisationRobot::runAlgoMainDroite( terrain& terrain,robot& rob
 {
     terrain.dessineTerrain(fenetre());
     majFenetre( terrain,robot);
-    while(!robot.detecteObstacleDevant(terrain))
+    while(estDansTerrain(terrain,robot))
     {
-        robot.tourneDroite();
-        majFenetre( terrain,robot);
-
-    }
-    robot.tourneGauche();
-    majFenetre( terrain,robot);
-
-    while(estDansTerrain(terrain, robot))
-    {
-
-        robot.tourneDroite();
-
-        majFenetre( terrain,robot);
-
         if(robot.detecteObstacleDevant(terrain))
         {
-
-            robot.tourneGauche();
-
+            robot.tourneDroite();
             majFenetre( terrain,robot);
             if(robot.detecteObstacleDevant(terrain))
             {
-
-                robot.tourneGauche();
+                robot.tourneDroite();
 
             }
             else
@@ -71,26 +54,28 @@ void programmeVisualisationRobot::runAlgoMainDroite( terrain& terrain,robot& rob
                 robot.avanceCase(terrain);
 
             }
+
         }
         else
         {
+            robot.tourneDroite();
             majFenetre( terrain,robot);
-
-            robot.avanceCase(terrain);
-
-
-            majFenetre( terrain,robot);
-
             if(robot.detecteObstacleDevant(terrain))
             {
-
                 robot.tourneGauche();
-                majFenetre( terrain,robot);
+                 majFenetre( terrain,robot);
+
+                robot.avanceCase(terrain);
+
+            }
+            else
+            {
+                robot.avanceCase(terrain);
 
             }
 
         }
-        majFenetre( terrain,robot);
+           majFenetre( terrain,robot);
     }
     terrain.dessineTerrain(fenetre());
     fenetre().repeteJusquaBouton();
@@ -182,6 +167,7 @@ void programmeVisualisationRobot::runAlgoPledge(terrain& terrain, robot& robot)
                         majFenetre( terrain,robot);
                     }
                 }
+
             }
             if(!robot.detecteObstacleDevant(terrain))
             {
