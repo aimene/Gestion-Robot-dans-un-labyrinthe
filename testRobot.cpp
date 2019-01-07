@@ -3,7 +3,7 @@
 #include "terrain.h"
 #include "point.h"
 #include "fenetre.h"
-
+#include <iostream>
 using affichage::fenetre;
 using gestionRobotTerrain::robot;
 using gestionRobotTerrain::terrain;
@@ -19,6 +19,8 @@ TEST_CASE("Les manipulations sur le robot sont correctes")
     int nouvelleDirection;
     robot robot{positionRobot,direction};
     fenetre fenetre{900,500};
+
+
     SUBCASE("Le robot position du robot change est correct")
     {
 
@@ -47,7 +49,7 @@ TEST_CASE("Les manipulations sur le robot sont correctes")
         robot = {positionRobotObstacleDevant,direction};
         robot.dessineRobot(terrain,fenetre);
         bool detecteObstacle = robot.detecteObstacleDevant(terrain);
-        REQUIRE(robot.detecteObstacleDevant(terrain) );
+        REQUIRE(detecteObstacle==true );
         fenetre.close();
     }
     SUBCASE("Le robot avance est correct")
@@ -56,10 +58,9 @@ TEST_CASE("Les manipulations sur le robot sont correctes")
         terrain terrain{"terrainBordureMur1.txt"};
         terrain.dessineTerrain(fenetre);
         robot.dessineRobot(terrain,fenetre);
-        fenetre.wait(1000);
+
         bool avance = robot.avanceCase(terrain);
         robot.dessineRobot(terrain,fenetre);
-        REQUIRE(robot.avanceCase(terrain) == true );
-        fenetre.close();
+        REQUIRE_EQ(avance,true );
     }
 }

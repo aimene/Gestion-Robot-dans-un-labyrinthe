@@ -24,8 +24,7 @@ fenetre& programmeVisualisationRobotAvance::fenetre()
 bool programmeVisualisationRobotAvance::estDansTerrain(terrain& terrain,robotAvance& robot)
 {
     return robot.positionRobot().x()<terrain.position().x()+terrain.tailleCase()*terrain.largeur() &&
-           robot.positionRobot().y()<terrain.position().y()+terrain.tailleCase()*terrain.hauteur()
-           ;
+           robot.positionRobot().y()<terrain.position().y()+terrain.tailleCase()*terrain.hauteur();
 }
 void programmeVisualisationRobotAvance::majFenetre(terrain& terrain, robotAvance& robot)
 {
@@ -169,7 +168,7 @@ void programmeVisualisationRobotAvance::runAlgoPledge(terrain& terrain, robotAva
     }
     terrain.dessineTerrain(fenetre());
     robotAvance.dessineRobot(terrain,fenetre());
-    fenetre().repeteJusquaBouton();
+    fenetre().close();
 
 }
 }
