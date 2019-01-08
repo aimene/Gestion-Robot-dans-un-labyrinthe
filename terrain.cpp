@@ -212,6 +212,9 @@ void terrain::sauveTerrain()
 
 void terrain::dessineTerrain(fenetre& fenetre)
 {
+    point bg {position().x(),position().y()+tailleCase()*hauteur()};
+    point hd {position().x()+tailleCase()*largeur(),position().y()};
+    fenetre.dessineRectangle(bg,hd);
     for(int i = 0 ; i< hauteur(); ++i)
     {
         for(int j = 0 ; j< largeur(); ++j)
