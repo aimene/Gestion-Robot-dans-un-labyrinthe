@@ -87,13 +87,15 @@ int main()
           fenetre.open();
         terrain.dessineTerrain(fenetre);
 
-        point position{50,550};
+        point position;
         if(choixTerrain==1)
         {
+            position={50,750};
             terrain.changeNomFichier("terrainCaseMur1final.txt");
         }
         if(choixTerrain==2)
         {
+         position={50,550};
          terrain.changeNomFichier("terrainBordureMur1final.txt");
         }
         if(choixRobot==1)
