@@ -6,12 +6,12 @@
 #include <string.h>
 using gestionRobotTerrain::terrain;
 
-TEST_CASE("Les manipulations sur le terrai sont correctes")
+TEST_CASE("Les manipulations sur le terrain sont correctes")
 {
     SUBCASE("La lecture du terrain est correct")
     {
        terrain terrain{"terrainBordureMur1.txt"};
-        terrain.litTerrain();
+        bool = terrain.litTerrain();
         REQUIRE_EQ(terrain.litTerrain(),true );
     }
     SUBCASE("Changer le nom du fichier terrain est correct")

@@ -12,7 +12,6 @@
 				<Option type="1" />
 				<Option compiler="gcc" />
 				<Compiler>
-					<Add option="-std=c++11" />
 					<Add option="-g" />
 				</Compiler>
 			</Target>
@@ -45,6 +44,10 @@
 		<Unit filename="fenetreAffichage.cpp" />
 		<Unit filename="fenetreAffichage.h" />
 		<Unit filename="graphics.h" />
+<<<<<<< HEAD
+=======
+		<Unit filename="main.cpp" />
+>>>>>>> d2464e95b41eb0746e461e8291b1571adfe63cfb
 		<Unit filename="menu.cpp" />
 		<Unit filename="point.cpp" />
 		<Unit filename="point.h" />
@@ -52,8 +55,11 @@
 		<Unit filename="programmeVisualisationRobot.h" />
 		<Unit filename="programmeVisualisationRobotAvance.cpp" />
 		<Unit filename="programmeVisualisationRobotAvance.h" />
+<<<<<<< HEAD
 		<Unit filename="programmeVisualisationRobotAvanceDeplacements.cpp" />
 		<Unit filename="programmeVisualisationRobotAvanceDeplacements.h" />
+=======
+>>>>>>> d2464e95b41eb0746e461e8291b1571adfe63cfb
 		<Unit filename="programmeVisualisationRobotDeplacements.cpp" />
 		<Unit filename="programmeVisualisationRobotDeplacements.h" />
 		<Unit filename="robot.cpp" />

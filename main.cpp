@@ -20,18 +20,21 @@ using affichage::fenetre;
 using namespace geom;
 int main()
 {
+
     fenetre fenetre {900,800};
-    point positionRobotAvance{50,550};
-    robotAvance robotAvance{positionRobotAvance,1};
-    terrain terrain{"terrainBordureMur1final.txt"};
+    point positionRobotAvance{50,750};
+    robot robotAvance{positionRobotAvance,1};
+    terrain terrain{"terrainCaseMur1final.txt"};
+
 
     fenetre.open();
 
         terrain.dessineTerrain(fenetre);
+
+
          programmeVisualisationRobot prog {fenetre};
 
-
-        prog.runAlgoMainDroite(terrain , robotAvance);
+        prog.runAlgoPledge(terrain , robotAvance);
 
 
 

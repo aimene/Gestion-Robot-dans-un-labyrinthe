@@ -104,6 +104,23 @@ void programmeVisualisationRobot::runAlgoPledge(terrain& terrain, robot& robot)
                 robot.avanceCase(terrain);
                 majFenetre( terrain,robot);
             }
+            else
+            {
+                robot.tourneGauche();
+                compteurTourne+=tourneGauche;
+                if(!robot.detecteObstacleDevant(terrain))
+                {
+                    robot.avanceCase(terrain);
+                    majFenetre( terrain,robot);
+                }
+                else
+                {
+                   robot.tourneGauche();
+                   majFenetre( terrain,robot);
+                   compteurTourne+=tourneGauche;
+                }
+
+            }
         }
         if(compteurTourne!=0)
         {
@@ -118,25 +135,44 @@ void programmeVisualisationRobot::runAlgoPledge(terrain& terrain, robot& robot)
                 majFenetre( terrain,robot);
                 compteurTourne+=tourneGauche;
             }
+            else//if(robot.detecteObstacleDevant(terrain))
+            {
+                robot.tourneDroite();
+                majFenetre( terrain,robot);
+                compteurTourne+=tourneDroite;
+            }
             if(robot.detecteObstacleDevant(terrain))
             {
                 robot.tourneDroite();
                 majFenetre( terrain,robot);
                 compteurTourne+=tourneDroite;
+                //robot.avanceCase(terrain);
+                majFenetre( terrain,robot);
+                if(!robot.detecteObstacleDevant(terrain))//test
+                {
+                    robot.avanceCase(terrain);
+                    majFenetre( terrain,robot);
+                    robot.tourneGauche();
+                    majFenetre( terrain,robot);
+                    compteurTourne+=tourneGauche;
+                    if(!robot.detecteObstacleDevant(terrain))
+                    {
+                        robot.avanceCase(terrain);
+                        majFenetre( terrain,robot);
+                    }
+                    else
+                    {
+                        robot.tourneDroite();
+                        compteurTourne+=tourneDroite;
+                        majFenetre( terrain,robot);
+                    }
+                }
 
             }
-            if(robot.detecteObstacleDevant(terrain))
-            {
-                robot.tourneDroite();
-                majFenetre( terrain,robot);
-                compteurTourne+=tourneDroite;
-                robot.avanceCase(terrain);
-                majFenetre( terrain,robot);
-            }
-            else
+            if(!robot.detecteObstacleDevant(terrain))
             {
                 robot.avanceCase(terrain);
-                majFenetre( terrain,robot);
+                majFenetre(terrain,robot);
             }
         }
         std::cout<<compteurTourne<<std::endl;

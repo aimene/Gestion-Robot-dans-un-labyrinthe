@@ -10,11 +10,26 @@
 				<Option output="bin/Debug/Test Gestion Robot dans un labyrinthe" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
-				<Option compiler="copy_of_gnu_gcc_compiler_81" />
+				<Option compiler="gnu_gcc_compiler_8" />
+				<Option projectCompilerOptionsRelation="-1" />
+				<Option projectLinkerOptionsRelation="-1" />
+				<Option projectIncludeDirsRelation="-1" />
+				<Option projectLibDirsRelation="-1" />
 				<Compiler>
 					<Add option="-std=c++11" />
+<<<<<<< HEAD
 					<Add option="-g" />
+=======
+>>>>>>> d2464e95b41eb0746e461e8291b1571adfe63cfb
 				</Compiler>
+				<MakeCommands>
+					<Build command="" />
+					<CompileFile command="" />
+					<Clean command="" />
+					<DistClean command="" />
+					<AskRebuildNeeded command="" />
+					<SilentBuild command=" &gt; $(CMD_NULL)" />
+				</MakeCommands>
 			</Target>
 			<Target title="Release">
 				<Option output="bin/Release/Test Gestion Robot dans un labyrinthe" prefix_auto="1" extension_auto="1" />
@@ -39,22 +54,18 @@
 		<Unit filename="caseMur.h" />
 		<Unit filename="cases.cpp" />
 		<Unit filename="cases.h" />
+		<Unit filename="doctest.h" />
 		<Unit filename="fenetre.cpp" />
 		<Unit filename="fenetre.h" />
 		<Unit filename="fenetreAffichage.cpp" />
 		<Unit filename="fenetreAffichage.h" />
 		<Unit filename="graphics.h" />
-		<Unit filename="menu.cpp" />
 		<Unit filename="point.cpp" />
 		<Unit filename="point.h" />
 		<Unit filename="programmeVisualisationRobot.cpp" />
 		<Unit filename="programmeVisualisationRobot.h" />
 		<Unit filename="programmeVisualisationRobotAvance.cpp" />
 		<Unit filename="programmeVisualisationRobotAvance.h" />
-		<Unit filename="programmeVisualisationRobotAvanceDeplacements.cpp" />
-		<Unit filename="programmeVisualisationRobotAvanceDeplacements.h" />
-		<Unit filename="programmeVisualisationRobotDeplacements.cpp" />
-		<Unit filename="programmeVisualisationRobotDeplacements.h" />
 		<Unit filename="robot.cpp" />
 		<Unit filename="robot.h" />
 		<Unit filename="robotAvance.cpp" />
@@ -62,6 +73,9 @@
 		<Unit filename="terrain.cpp" />
 		<Unit filename="terrain.h" />
 		<Unit filename="testCaseBordureMur.cpp" />
+		<Unit filename="testCaseMur.cpp" />
+		<Unit filename="testProgrammeVisualisationRobot.cpp" />
+		<Unit filename="testProgrammeVisualisationRobotAvance.cpp" />
 		<Unit filename="testRobot.cpp" />
 		<Unit filename="testRobotAvance.cpp" />
 		<Unit filename="testTerrain.cpp" />
