@@ -489,3 +489,16 @@
 1546232884 f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\programmevisualisationrobotavancedeplacements.h
 	"programmeVisualisationRobotAvance.h"
 
+1546895106 source:c:\users\amiour aimene\documents\codeblocksworkspace\gestion robot dans un labyrinthe\menu.cpp
+	<iostream>
+	"terrain.h"
+	<cstdlib>
+	"cases.h"
+	"fenetre.h"
+	"robot.h"
+	"point.h"
+	"programmeVisualisationRobotDeplacements.h"
+	"programmeVisualisationRobotAvanceDeplacements.h"
+	"programmeVisualisationRobot.h"
+	"programmeVisualisationRobotAvance.h"
+

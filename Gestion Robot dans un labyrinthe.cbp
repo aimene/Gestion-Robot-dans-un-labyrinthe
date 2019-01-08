@@ -45,13 +45,14 @@
 		<Unit filename="fenetreAffichage.cpp" />
 		<Unit filename="fenetreAffichage.h" />
 		<Unit filename="graphics.h" />
-		<Unit filename="main.cpp" />
+		<Unit filename="menu.cpp" />
 		<Unit filename="point.cpp" />
 		<Unit filename="point.h" />
 		<Unit filename="programmeVisualisationRobot.cpp" />
 		<Unit filename="programmeVisualisationRobot.h" />
 		<Unit filename="programmeVisualisationRobotAvance.cpp" />
 		<Unit filename="programmeVisualisationRobotAvance.h" />
+		<Unit filename="programmeVisualisationRobotAvanceDeplacements.cpp" />
 		<Unit filename="programmeVisualisationRobotAvanceDeplacements.h" />
 		<Unit filename="programmeVisualisationRobotDeplacements.cpp" />
 		<Unit filename="programmeVisualisationRobotDeplacements.h" />

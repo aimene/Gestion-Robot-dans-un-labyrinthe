@@ -12,6 +12,7 @@
 				<Option type="1" />
 				<Option compiler="copy_of_gnu_gcc_compiler_81" />
 				<Compiler>
+					<Add option="-std=c++11" />
 					<Add option="-g" />
 				</Compiler>
 			</Target>
