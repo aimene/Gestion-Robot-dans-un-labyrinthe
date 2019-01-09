@@ -70,9 +70,9 @@ int main()
             system("CLS");
             cout << "Vous avez le choix entre: \n"
                  << " 1. Algorithme de main droite\n"
-                 << " 2. Algorithme de Pledge\n"
-                 << " 3. Algorithme de main droite avec déplacements\n"
-                 << " 4. Algorithme de Pledge avec déplacements\n"
+                 << " 2. Algorithme de main droite avec deplacements\n"
+                 << " 3. Algorithme de Pledge\n"
+                 << " 4. Algorithme de Pledge avec deplacements\n"
                  << " 0. Quitter\n"
                  << " Saisisez votre choix: ";
             cin >> choixAlgos;

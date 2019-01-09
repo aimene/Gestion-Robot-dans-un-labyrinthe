@@ -17,10 +17,6 @@
 				<Option projectLibDirsRelation="-1" />
 				<Compiler>
 					<Add option="-std=c++11" />
-<<<<<<< HEAD
-					<Add option="-g" />
-=======
->>>>>>> d2464e95b41eb0746e461e8291b1571adfe63cfb
 				</Compiler>
 				<MakeCommands>
 					<Build command="" />

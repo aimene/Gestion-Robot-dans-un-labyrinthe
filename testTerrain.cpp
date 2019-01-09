@@ -10,13 +10,13 @@ TEST_CASE("Les manipulations sur le terrain sont correctes")
 {
     SUBCASE("La lecture du terrain est correct")
     {
-       terrain terrain{"terrainBordureMur1.txt"};
-        bool = terrain.litTerrain();
-        REQUIRE_EQ(terrain.litTerrain(),true );
+       terrain terrain{"terrainBordureMur1final.txt"};
+        bool lit = terrain.litTerrain();
+        REQUIRE_EQ(lit,true );
     }
     SUBCASE("Changer le nom du fichier terrain est correct")
     {
-         terrain terrain{"terrainBordureMur2.txt"};
+         terrain terrain{"terrainBordureMur1final.txt"};
          std::string nomFichier ="nouveauNom";
          terrain.changeNomFichier(nomFichier);
          REQUIRE_EQ(terrain.nomFichier(),nomFichier);

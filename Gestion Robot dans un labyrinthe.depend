@@ -253,7 +253,7 @@
 1546232884 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\cases.cpp
 	"cases.h"
 
-1546939123 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\terrain.cpp
+1546944382 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\terrain.cpp
 	"terrain.h"
 	"caseMur.h"
 	"caseBordureMur.h"
@@ -404,7 +404,7 @@
 	"robot.h"
 	"programmeVisualisation.h"
 
-1546901490 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\programmevisualisationrobot.cpp
+1546944382 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\programmevisualisationrobot.cpp
 	"programmeVisualisationRobot.h"
 	"windows.h"
 
@@ -418,7 +418,7 @@
 
 1545924032 c:\users\bilell\documents\gestion-robot-dans-un-labyrinthe\programmevisualisationrobot.h
 
-1546901533 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\menu.cpp
+1546970701 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\menu.cpp
 	<iostream>
 	"terrain.h"
 	<cstdlib>
@@ -457,7 +457,7 @@
 	"robotAvance.h"
 	"point.h"
 
-1546901507 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\programmevisualisationrobotavance.cpp
+1546954452 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\programmevisualisationrobotavance.cpp
 	"programmeVisualisationRobotAvance.h"
 
 1546232884 813f929d2399b5c98ab3cdb87c4f36bf846b7
@@ -474,7 +474,11 @@
 	"robotAvance.h"
 	"fenetre.h"
 
-1546201087 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\programmevisualisationrobotavancedeplacements.cpp
+1546232884 source:f:\l3 informatique\poo\gestion-robot-dans-un-labyrinthe\programmevisualisationrobotavancedeplacements.cpp
+	"programmeVisualisationRobotAvanceDeplacements.h"
+	"windows.h"
+	"robotAvance.h"
+	"point.h"
 
 1546197323 56488afd609ab2956a4644282f6be78197fe6
 

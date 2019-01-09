@@ -25,6 +25,6 @@ TEST_CASE("Les cases qui sont des murs sont correctes")
     SUBCASE("Un mur est dans le terrain est correct")
     {
         bool estMur = (dynamic_cast<caseMur*>(matriceTerrain[0][0]))->estMur();
-        REQUIRE_EQ(estMurmur,true);
+        REQUIRE_EQ(estMur,true);
     }
 }

@@ -169,9 +169,9 @@ void programmeVisualisationRobotAvance::runAlgoPledge(terrain& terrain, robotAva
             {
                 if(robotAvance.detecteObstacleDevant(terrain))
                 {
-                    robotAvance.tourneDroite();
+                    robotAvance.tourneGauche();
                     majFenetre(terrain,robotAvance);
-                    compteurTourne+=tourneDroite;
+                    compteurTourne+=tourneGauche;
                 }
                 else
                 {
